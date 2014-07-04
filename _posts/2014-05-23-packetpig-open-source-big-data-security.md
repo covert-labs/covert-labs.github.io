@@ -1,4 +1,3 @@
-2014-05-23-packetpig-open-source-big-data-security-analysis.md
 ---
 layout: post
 title: Packetpig - Open Source Big Data Security Analysis

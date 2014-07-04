@@ -9,6 +9,7 @@ image:
 comments: true
 share: true
 ---
+
 ![](/images/internet-census-world-map.png)
 
 A couple days ago, this was posted:

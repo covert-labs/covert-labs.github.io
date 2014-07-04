@@ -10,7 +10,7 @@ comments: true
 share: true
 ---
 
-<img src="/images/sandia.png" /><br />
+![](/images/sandia.png)
 
 I stumbled on this recently.  It is a small collection of reports/publications from Sandia National Labs on using Machine Learning and Predictive Analytics for Computer Network Defense.  Here is what is contained in the PDF:
 
