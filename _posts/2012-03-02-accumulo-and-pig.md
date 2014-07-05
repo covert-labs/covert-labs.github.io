@@ -8,6 +8,7 @@ image:
   feature: abstract-3.jpg
 comments: true
 share: true
+permalink: /post/18605091231/accumulo-and-pig
 ---
 
 I just posted a functional AccumuloStorage module to [github](https://github.com/jt6211/accumulo-pig).

@@ -8,6 +8,7 @@ image:
   feature: abstract-3.jpg
 comments: true
 share: true
+permalink: /post/23640449489/packetpig-open-source-big-data-security-analysis
 ---
 
 A coworker told me about this project today, and I thought I would share since it looks promising.

@@ -8,6 +8,7 @@ image:
   feature: abstract-6.jpg
 comments: true
 share: true
+permalink: /post/41859934400/large-scale-malicious-domain-classification-with-storm
 ---
 
 <center>

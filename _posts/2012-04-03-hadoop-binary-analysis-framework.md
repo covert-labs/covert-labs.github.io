@@ -8,6 +8,7 @@ image:
   feature: abstract-7.jpg
 comments: true
 share: true
+permalink: /post/20404247709/hadoop-binary-analysis-framework
 ---
 
 **Update (2013-08-01)**:  This project is no longer maintain since we port all this functionality over to BinaryPig. Use [BinaryPig](https://github.com/endgameinc/binarypig) instead.  For more information on BinaryPig, see [Slides](http://www.slideshare.net/jasontrost/binary-24851796), [Paper](https://media.blackhat.com/us-13/US-13-Hanif-Binarypig-Scalable-Malware-Analytics-in-Hadoop-WP.pdf), or [Video](https://www.youtube.com/watch?v=fcLkTvnBpIw).

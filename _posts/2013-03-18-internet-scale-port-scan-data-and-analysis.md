@@ -8,6 +8,7 @@ image:
   feature: abstract-4.jpg
 comments: true
 share: true
+permalink: /post/45716321979/internet-scale-port-scan-data-and-analysis
 ---
 
 ![](/images/internet-census-world-map.png)

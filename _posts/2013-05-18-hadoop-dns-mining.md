@@ -8,6 +8,7 @@ image:
   feature: abstract-3.jpg
 comments: true
 share: true
+permalink: /post/23331714509/hadoop-dns-mining
 ---
 
 This is another quick post.  I have been working on this small framework for a while now and I decided to publish the code before I completely finished.

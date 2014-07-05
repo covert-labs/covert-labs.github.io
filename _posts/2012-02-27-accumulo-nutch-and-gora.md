@@ -8,6 +8,7 @@ image:
   feature: abstract-3.jpg
 comments: true
 share: true
+permalink: /post/18414889381/accumulo-nutch-and-gora
 ---
 
 In this post I will outline the steps necessary to use <a href="http://incubator.apache.org/accumulo/" target="_self">Accumulo</a> and <a href="http://gora.apache.org/" target="_self">Gora</a> to store content retrieved by <a href="http://nutch.apache.org/" target="_self">Nutch</a>.

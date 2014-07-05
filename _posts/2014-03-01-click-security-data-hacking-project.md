@@ -8,6 +8,7 @@ image:
   feature: abstract-3.jpg
 comments: true
 share: true
+permalink: /post/79057561828/click-security-data-hacking-project
 ---
 
 [This](http://clicksecurity.github.io/data_hacking/) is an awesome collection of Security Data Science ipython notebooks from [@clicksecurity](https://twitter.com/clicksecurity). 

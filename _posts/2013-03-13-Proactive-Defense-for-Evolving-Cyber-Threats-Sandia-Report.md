@@ -8,6 +8,7 @@ image:
   feature: abstract-5.jpg
 comments: true
 share: true
+permalink: /post/42500033474/proactive-defense-for-evolving-cyber-threats-sandia
 ---
 
 ![](/images/sandia.png)

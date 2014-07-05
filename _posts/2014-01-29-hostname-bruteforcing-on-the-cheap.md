@@ -8,6 +8,7 @@ image:
   feature: abstract-1.jpg
 comments: true
 share: true
+permalink: /post/75044976035/hostname-bruteforcing-on-the-cheap-room362-com
 ---
 
 Mubix ([@mubix](https://twitter.com/mubix)) [used](http://www.room362.com/blog/2014/01/29/hostname-bruteforcing-on-the-cheap/) the subdomains list from [here](http://www.ethicalhack3r.co.uk/zone-transfers-on-the-alexa-top-1-million/) to bruteforce subdomains using dig and args.  Really nice use of xargs for parallel execution.
