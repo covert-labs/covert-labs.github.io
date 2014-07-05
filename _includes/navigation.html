@@ -50,6 +50,18 @@
 				<li><a href="{{ site.url }}/tags/">All Tags</a></li>
 			</ul>
 		</li>
+		<li>
+			<a href="#">Reading</a>
+			<ul class="dl-submenu">
+				<li><a href="{{ site.url }}/reading-list/">Books</a></li>
+				<li><a href="{{ site.url }}/security-blogs/">Security Blogs</a></li>
+				<li><a href="{{ site.url }}/security-intel-blogs/">Security Intel Blogs</a></li>
+				<li><a href="{{ site.url }}/forensics-blogs/">Forensics Blogs</a></li>
+				<li><a href="{{ site.url }}/machine-learning-blogs/">Machine Learning Blogs</a></li>
+				<li><a href="{{ site.url }}/big-data-blogs/">Big Data Blogs</a></li>
+			</ul>
+		</li>
+
 		{% for link in site.links %}<li>{% if link.external %}<a href="{{ link.url }}">{{ link.title }}</a>{% else %}<a href="{{ site.url }}{{ link.url }}">{{ link.title }}</a>{% endif %}</li>{% endfor %}
 	</ul><!-- /.dl-menu -->
 </nav><!-- /.dl-menuwrapper -->
