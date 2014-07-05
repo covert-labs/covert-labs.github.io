@@ -1,7 +1,7 @@
 title:            Covert.io
 description:      A blog about the intersection of Cyber Security, Big Data, and Machine Learning
 disqus_shortname: 
-reading_time:     true
+reading_time:     false
 words_per_minute: 200
 #Your site's domain goes here. Leave localhost server or blank when working locally.
 url:              http://jt6211.github.io
