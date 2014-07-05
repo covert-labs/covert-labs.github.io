@@ -3,6 +3,8 @@ layout: post-index
 permalink: /tags/
 title: Tag Archive
 description: "An archive of posts sorted by tag."
+image:
+  feature: abstract-2.jpg
 ---
 
 {% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
