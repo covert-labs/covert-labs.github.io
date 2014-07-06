@@ -2,7 +2,7 @@
 layout: post
 title: Packetpig - Open Source Big Data Security Analysis
 description: "Packetpig - Open Source Big Data Security Analysis"
-modified: 2014-05-23
+modified: 2012-05-23
 tags: [security, hadoop, bigdata, pcap, analysis]
 image:
   feature: grey-scale-dark.jpg
