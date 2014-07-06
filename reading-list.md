@@ -5,7 +5,7 @@ title: Reading List
 description: "Various books I recommend"
 tags: [reading list]
 image:
-  feature: abstract-11.jpg
+  feature: grey-scale-dark.jpg
 share: true
 ---
 

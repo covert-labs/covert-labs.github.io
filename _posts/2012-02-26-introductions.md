@@ -5,7 +5,7 @@ description: "Introductions"
 modified: 2012-02-26
 tags: [introductions, welcome]
 image:
-  feature: abstract-3.jpg
+  feature: grey-scale-dark.jpg
 comments: true
 share: true
 permalink: /post/18414600861/introductions

@@ -5,7 +5,7 @@ title: Security Tools
 description: "Security Tools"
 tags: [security tools]
 image:
-  feature: abstract-11.jpg
+  feature: grey-scale-dark.jpg
 share: true
 ---
 

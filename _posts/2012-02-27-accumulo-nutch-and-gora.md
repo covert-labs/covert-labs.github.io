@@ -5,7 +5,7 @@ description: "Accumulo, Nutch, and Gora"
 modified: 2012-02-27
 tags: [hadoop, accumulo, nutch, gora, web crawling]
 image:
-  feature: abstract-3.jpg
+  feature: grey-scale-dark.jpg
 comments: true
 share: true
 permalink: /post/18414889381/accumulo-nutch-and-gora

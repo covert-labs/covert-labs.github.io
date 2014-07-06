@@ -5,7 +5,7 @@ description: "Large-scale Malware Static Analysis using Hadoop"
 modified: 2013-08-01
 tags: [dns, data mining, hadoop, mapreduce, malware, static analysis]
 image:
-  feature: abstract-7.jpg
+  feature: grey-scale-dark.jpg
 comments: true
 share: true
 permalink: /post/20404247709/hadoop-binary-analysis-framework

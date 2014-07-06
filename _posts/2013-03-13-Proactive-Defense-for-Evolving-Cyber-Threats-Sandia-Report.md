@@ -5,7 +5,7 @@ description: "Proactive Defense for Evolving Cyber Threats (Sandia Report)"
 modified: 2013-05-31
 tags: [predictive analytics, cyber, security, network, machine learning]
 image:
-  feature: abstract-5.jpg
+  feature: grey-scale-dark.jpg
 comments: true
 share: true
 permalink: /post/42500033474/proactive-defense-for-evolving-cyber-threats-sandia
@@ -25,4 +25,3 @@ I stumbled on this recently.  It is a small collection of reports/publications f
 [Proactive Defense for Evolving Cyber  Threats (PDF)](http://www.fas.org/irp/eprint/proactive.pdf)
 
 --Jason
-x	

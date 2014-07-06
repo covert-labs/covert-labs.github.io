@@ -5,7 +5,7 @@ description: "Security Data Science from ClickSecurity"
 modified: 2013-05-31
 tags: [security, machine learning, data science]
 image:
-  feature: abstract-3.jpg
+  feature: grey-scale-dark.jpg
 comments: true
 share: true
 permalink: /post/79057561828/click-security-data-hacking-project

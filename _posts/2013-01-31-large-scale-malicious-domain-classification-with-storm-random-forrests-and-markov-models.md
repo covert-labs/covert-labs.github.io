@@ -5,7 +5,7 @@ description: "Large Scale Malicious Domain Classification with Storm, Random For
 modified: 2013-01-31
 tags: [security, machine learning, data science, dns, storm, endgame, bigdata, realtime, random forrest, classifier, markov model]
 image:
-  feature: abstract-6.jpg
+  feature: grey-scale-dark.jpg
 comments: true
 share: true
 permalink: /post/41859934400/large-scale-malicious-domain-classification-with-storm

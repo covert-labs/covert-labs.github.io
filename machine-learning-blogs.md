@@ -5,7 +5,7 @@ title: Machine Learning Blogs
 description: "Machine Learning Blogs I regularly read"
 tags: [blogs, machine learning, reading list]
 image:
-  feature: abstract-11.jpg
+  feature: grey-scale-dark.jpg
 share: true
 ---
 

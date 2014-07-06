@@ -5,7 +5,7 @@ description: "Hostname bruteforcing on the cheap from @mubix"
 modified: 2014-01-29
 tags: [security, dns, brute force, pentest]
 image:
-  feature: abstract-1.jpg
+  feature: grey-scale-dark.jpg
 comments: true
 share: true
 permalink: /post/75044976035/hostname-bruteforcing-on-the-cheap-room362-com

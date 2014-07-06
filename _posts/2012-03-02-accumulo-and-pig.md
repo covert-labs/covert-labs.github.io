@@ -5,7 +5,7 @@ description: "Accumulo and Pig"
 modified: 2012-03-02
 tags: [hadoop, apache pig, accumulo, bigdata]
 image:
-  feature: abstract-3.jpg
+  feature: grey-scale-dark.jpg
 comments: true
 share: true
 permalink: /post/18605091231/accumulo-and-pig

@@ -5,7 +5,7 @@ title: Forensics Blogs
 description: "Forensics Blogs I regularly read"
 tags: [blogs, digital forensics, reading list]
 image:
-  feature: abstract-11.jpg
+  feature: grey-scale-dark.jpg
 share: true
 ---
 

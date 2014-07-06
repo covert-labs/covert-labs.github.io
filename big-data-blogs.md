@@ -5,7 +5,7 @@ title: Big Data Blogs
 description: "Big Data Blogs I regularly read"
 tags: [blogs, big data, reading list]
 image:
-  feature: abstract-11.jpg
+  feature: grey-scale-dark.jpg
 share: true
 ---
 

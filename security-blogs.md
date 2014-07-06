@@ -5,7 +5,7 @@ title: Security Blogs
 description: "Security Blogs I regularly read"
 tags: [blogs, security, reading list]
 image:
-  feature: abstract-11.jpg
+  feature: grey-scale-dark.jpg
 share: true
 ---
 

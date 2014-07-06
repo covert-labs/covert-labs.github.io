@@ -5,7 +5,7 @@ description: "Hadoop DNS Mining"
 modified: 2013-05-18
 tags: [security, machine learning, data science]
 image:
-  feature: abstract-3.jpg
+  feature: grey-scale-dark.jpg
 comments: true
 share: true
 permalink: /post/23331714509/hadoop-dns-mining

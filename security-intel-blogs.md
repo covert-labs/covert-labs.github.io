@@ -5,7 +5,7 @@ title: Security Intel Blogs
 description: "Security Intel Blogs I regularly read"
 tags: [blogs, security intelligence, reading list]
 image:
-  feature: abstract-11.jpg
+  feature: grey-scale-dark.jpg
 share: true
 ---
 

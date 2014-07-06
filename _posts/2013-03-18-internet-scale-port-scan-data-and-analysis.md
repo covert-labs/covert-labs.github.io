@@ -5,7 +5,7 @@ description: "Internet Scale Port Scan Data and Analysis"
 modified: 2013-03-18
 tags: [portscan, internet scale, big data, security, hacking]
 image:
-  feature: abstract-4.jpg
+  feature: grey-scale-dark.jpg
 comments: true
 share: true
 permalink: /post/45716321979/internet-scale-port-scan-data-and-analysis
