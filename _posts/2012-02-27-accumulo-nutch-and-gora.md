@@ -82,7 +82,15 @@ git checkout origin/nutchgora
 {% endhighlight %}
 
 *   Modify the ```ivy/ivy.xml``` file. Change gora-core and gora-sql dependencies rev from ```"0.1.1-incubating"``` to ```"0.2-SNAPSHOT"```.  This is to match the patched version we just installed.  Also, add the following lines:
-<script src="https://gist.github.com/1923654.js"></script>
+
+{% highlight xml %}
+<dependency org="org.apache.accumulo" name="accumulo-core" rev="1.5.0-incubating-SNAPSHOT" />
+<dependency org="org.apache.accumulo" name="cloudtrace" rev="1.5.0-incubating-SNAPSHOT" />
+<dependency org="org.apache.thrift" name="libthrift" rev="0.6.1" />
+<dependency org="org.apache.gora" name="gora-accumulo" rev="0.2-SNAPSHOT" />
+<dependency org="org.apache.zookeeper" name="zookeeper" rev="3.4.3" />
+{% endhighlight %}
+
 *   Modify the ```ivy/ivysettings.xml``` file.  Add the following line to the top of the ```<resolvers>``` section. This will configure ant/ivy to use your local maven repository when resolving dependencies.  This is necessary because the patched version of GORA and the latest Accumulo version are not in any public maven repos.
 <br />
 
@@ -94,22 +102,133 @@ pattern="${maven2.pattern.ext}"  m2compatible="true"  />
 <br />
 <ul>
 <li>Patch <code>src/java/org/apache/nutch/storage/StorageUtils.java</code></li>
-<script src="https://gist.github.com/jt6211/1779397.js"></script>
+
+{% highlight java %}
+diff --git a/src/java/org/apache/nutch/storage/StorageUtils.java b/src/java/org/apache/nutch/storage/StorageUtils.java
+index de740b5..19b37ad 100644
+--- a/src/java/org/apache/nutch/storage/StorageUtils.java
++++ b/src/java/org/apache/nutch/storage/StorageUtils.java
+@@ -40,8 +40,9 @@ public class StorageUtils {
+       Class<K> keyClass, Class<V> persistentClass) throws ClassNotFoundException, GoraException {
+     Class<? extends DataStore<K, V>> dataStoreClass =
+       (Class<? extends DataStore<K, V>>) getDataStoreClass(conf);
++    
+     return DataStoreFactory.createDataStore(dataStoreClass,
+-            keyClass, persistentClass);
++            keyClass, persistentClass, conf);
+   }
+ 
+   @SuppressWarnings("unchecked")
+@@ -56,8 +57,9 @@ public class StorageUtils {
+ 
+     Class<? extends DataStore<K, V>> dataStoreClass =
+       (Class<? extends DataStore<K, V>>) getDataStoreClass(conf);
++    
+     return DataStoreFactory.createDataStore(dataStoreClass,
+-            keyClass, persistentClass, schema);
++            keyClass, persistentClass, conf, schema);
+   }
+ 
+   @SuppressWarnings("unchecked")
+{% endhighlight %}
+
 
 <li>Create the file <code>conf/gora-accumulo-mapping.xml</code> with the following contents:</li>
-<script src="https://gist.github.com/1923420.js"></script>
+
+{% highlight text %}
+<gora-orm>
+  <table name="webpage">
+  <config key="table.file.compress.blocksize" value="32K"/>
+  </table>
+
+  <class table="webpage" keyClass="java.lang.String" 
+               name="org.apache.nutch.storage.WebPage">
+    <!-- fetch fields                     -->
+    <field name="baseUrl" family="f" qualifier="bas"/>
+    <field name="status" family="f" qualifier="st"/>
+    <field name="prevFetchTime" family="f" qualifier="pts"/>
+    <field name="fetchTime" family="f" qualifier="ts"/>
+    <field name="fetchInterval" family="f" qualifier="fi"/>
+    <field name="retriesSinceFetch" family="f" qualifier="rsf"/>
+    <field name="reprUrl" family="f" qualifier="rpr"/>
+    <field name="content" family="f" qualifier="cnt"/>
+    <field name="contentType" family="f" qualifier="typ"/>
+    <field name="protocolStatus" family="f" qualifier="prot"/>
+    <field name="modifiedTime" family="f" qualifier="mod"/>
+    
+    <!-- parse fields                     -->
+    <field name="title" family="p" qualifier="t"/>
+    <field name="text" family="p" qualifier="c"/>
+    <field name="parseStatus" family="p" qualifier="st"/>
+    <field name="signature" family="p" qualifier="sig"/>
+    <field name="prevSignature" family="p" qualifier="psig"/>
+    
+    <!-- score fields                     -->
+    <field name="score" family="s" qualifier="s"/>
+    <field name="headers" family="h"/>
+    <field name="inlinks" family="il"/>
+    <field name="outlinks" family="ol"/>
+    <field name="metadata" family="mtdt"/>
+    <field name="markers" family="mk"/>
+  </class>
+</gora-orm>
+{% endhighlight %}
 
 <li>Edit <code>conf/gora.properties</code> and add the following lines:</li>
-<script src="https://gist.github.com/1923436.js"></script>
+
+{% highlight properties %}
+gora.datastore.default=org.apache.gora.accumulo.store.AccumuloStore
+gora.datastore.accumulo.mock=false
+gora.datastore.accumulo.instance=inst
+gora.datastore.accumulo.zookeepers=localhost
+gora.datastore.accumulo.user=root
+gora.datastore.accumulo.password=secret
+gora.datastore.accumulo.zookeepers=127.0.0.1:2181
+{% endhighlight %}
+
 
 <li>edit (or create) <code>conf/nutch-site.xml</code> and adding the following property setting to it</li>
-<script src="https://gist.github.com/1923513.js"></script>
+
+{% highlight text %}
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+    <property>
+      <name>storage.data.store.class</name>
+      <value>org.apache.gora.accumulo.store.AccumuloStore</value>
+    </property>
+<property>
+  <name>http.agent.name</name>
+  <value>Nutch</value>
+</property>
+</configuration>
+{% endhighlight %}
+
 
 <li>edit $HOME/.ivy2/cache/jaxen/jaxen/ivy-1.1.3.xml and find and comment out the following lines.  If anyone knows a more elegant way to accomplish this please let me know.  </li>
-<script src="https://gist.github.com/1932096.js"></script>
+
+{% highlight xml %}
+<!--            <dependency org="maven-plugins" name="maven-cobertura-plugin" rev="1.3" force="true" conf="compile->compile(*),master(*);runtime->runtime(*)">
+                        <artifact name="maven-cobertura-plugin" type="plugin" ext="plugin" conf=""/>
+                </dependency>
+                <dependency org="maven-plugins" name="maven-findbugs-plugin" rev="1.3.1" force="true" conf="compile->compile(*),master(*);runtime->runtime(*)">
+                        <artifact name="maven-findbugs-plugin" type="plugin" ext="plugin" conf=""/>
+                </dependency>
+-->
+{% endhighlight %}
 
 If I don't comment out those dependencies, I get this error during compilation:
-<script src="https://gist.github.com/1932108.js"></script>
+
+{% highlight text %}
+[ivy:resolve]     ::::::::::::::::::::::::::::::::::::::::::::::
+[ivy:resolve]     ::              FAILED DOWNLOADS            ::
+[ivy:resolve]     :: ^ see resolution messages for details  ^ ::
+[ivy:resolve]     ::::::::::::::::::::::::::::::::::::::::::::::
+[ivy:resolve]     :: maven-plugins#maven-cobertura-plugin;1.3!maven-cobertura-plugin.plugin
+[ivy:resolve]     :: maven-plugins#maven-findbugs-plugin;1.3.1!maven-findbugs-plugin.plugin
+[ivy:resolve]     ::::::::::::::::::::::::::::::::::::::::::::::
+{% endhighlight %}
+
 
 <li>Run the following commands:</li>
 </ul>
@@ -386,7 +505,56 @@ cd ../accumulo-1.5.0-incubating-SNAPSHOT/bin/
 ./accumulo shell -u root -p secret
 {% endhighlight %}
 
-<script src="https://gist.github.com/1928543.js"></script>
+{% highlight text %}
+Shell - Accumulo Interactive Shell
+- 
+- version: 1.5.0-incubating-SNAPSHOT
+- instance name: inst
+- instance id: ce63fe79-6624-46c7-98a5-c6a98b8cfcef
+- 
+- type 'help' for a list of available commands
+- 
+root@inst> table webpage
+root@inst webpage> scan
+org.apache.projects:http/categories.html f:fi []    \x00'\x8D\x00
+org.apache.projects:http/categories.html f:st []    \x00\x00\x00\x01
+org.apache.projects:http/categories.html f:ts []    \x00\x00\x015\xC3\xA8\xCD\x90
+org.apache.projects:http/categories.html il:http://projects.apache.org/indexes/alpha.html []    Categories
+org.apache.projects:http/categories.html mk:_gnmrk_ []    1330427514-1313139543
+org.apache.projects:http/categories.html mtdt:_csh_ []    <\x16O\xDA
+org.apache.projects:http/categories.html s:s []    <\x16O\xDA
+org.apache.projects:http/create.html f:fi []    \x00'\x8D\x00
+org.apache.projects:http/create.html f:st []    \x00\x00\x00\x01
+org.apache.projects:http/create.html f:ts []    \x00\x00\x015\xC3\xA8\xCD\x92
+org.apache.projects:http/create.html il:http://projects.apache.org/indexes/alpha.html []    Create a DOAP File
+org.apache.projects:http/create.html mk:_gnmrk_ []    1330427514-1313139543
+org.apache.projects:http/create.html mtdt:_csh_ []    <\x16O\xDA
+org.apache.projects:http/create.html s:s []    <\x16O\xDA
+org.apache.projects:http/doap.html f:fi []    \x00'\x8D\x00
+org.apache.projects:http/doap.html f:st []    \x00\x00\x00\x01
+org.apache.projects:http/doap.html f:ts []    \x00\x00\x015\xC3\xA8\xCD\x92
+org.apache.projects:http/doap.html il:http://projects.apache.org/indexes/alpha.html []    DOAP Files
+org.apache.projects:http/doap.html mk:_gnmrk_ []    1330427514-1313139543
+org.apache.projects:http/doap.html mtdt:_csh_ []    <\x16O\xDA
+org.apache.projects:http/doap.html s:s []    <\x16O\xDA
+org.apache.projects:http/doapfaq.html f:fi []    \x00'\x8D\x00
+org.apache.projects:http/doapfaq.html f:st []    \x00\x00\x00\x01
+org.apache.projects:http/doapfaq.html f:ts []    \x00\x00\x015\xC3\xA8\xCD\x93
+org.apache.projects:http/doapfaq.html il:http://projects.apache.org/indexes/alpha.html []    DOAP File FAQ
+org.apache.projects:http/doapfaq.html mk:_gnmrk_ []    1330427514-1313139543
+org.apache.projects:http/doapfaq.html mtdt:_csh_ []    <\x16O\xDA
+org.apache.projects:http/doapfaq.html s:s []    <\x16O\xDA
+org.apache.projects:http/docs/dependancies.html f:fi []    \x00'\x8D\x00
+org.apache.projects:http/docs/dependancies.html f:st []    \x00\x00\x00\x01
+org.apache.projects:http/docs/dependancies.html f:ts []    \x00\x00\x015\xC3\xA8\xCD\x94
+org.apache.projects:http/docs/dependancies.html il:http://projects.apache.org/indexes/alpha.html []    Dependencies
+org.apache.projects:http/docs/dependancies.html mk:_gnmrk_ []    1330427514-1313139543
+org.apache.projects:http/docs/dependancies.html mtdt:_csh_ []    <\x16O\xDA
+org.apache.projects:http/docs/dependancies.html s:s []    <\x16O\xDA
+org.apache.projects:http/docs/index.html f:fi []    \x00'\x8D\x00
+org.apache.projects:http/docs/index.html f:st []    \x00\x00\x00\x01
+org.apache.projects:http/docs/index.html f:ts []    \x00\x00\x015\xC3\xA8\xCD\x96
+{% endhighlight %}
 
 Further details and exploration of this data in Accumulo will have to wait for another blog post.
 
