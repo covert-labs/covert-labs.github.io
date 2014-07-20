@@ -10,7 +10,11 @@ comments: true
 share: true
 ---
 
-Over the past several years I have collected and read many security research papers/slides and have started a small catalog of sorts.  The topics of these papers range from intrusion detection, anomaly detection, machine learning/data mining, internet scale data collection, malware analysis, and intrusion reports.  I figured this collection may be useful to others so here it is.  I hope to clean this up when I get some more time as well as adding some detailed notes I have on the various features, models, algorithms, and datasets used in many of these papers.
+Over the past several years I have collected and read many security research papers/slides and have started a small catalog of sorts.  The topics of these papers range from intrusion detection, anomaly detection, machine learning/data mining, Internet scale data collection, malware analysis, and intrusion/breach reports.  I figured this collection might useful to others so here it is.  
+
+I hope to clean this up (add author info, date, and publication) when I get some more time as well as adding some detailed notes I have on the various features, models, algorithms, and datasets used in many of these papers.
+
+All links lead to PDFs hosted here.
 
 ## Intrusion Detection
 
@@ -37,8 +41,8 @@ Over the past several years I have collected and read many security research pap
 * [Effective Anomaly Detection with Scarce Training Data](/research-papers/security/Effective Anomaly Detection with Scarce Training Data.pdf)
 * [Efficient Multidimensional Aggregation for Large Scale Monitoring](/research-papers/security/Efficient Multidimensional Aggregation for Large Scale Monitoring.pdf)
 * [EFFORT - Efficient and Effective Bot Malware Detection](/research-papers/security/EFFORT - Efficient and Effective Bot Malware Detection.pdf)
-* [ExecScent- Mining for New C and C Domains in Live Networks with Adapive Control Protocol Templates - slides](/research-papers/security/ExecScent- Mining for New C and C Domains in Live Networks with Adapive Control Protocol Templates - slides.pdf)
-* [ExecScent- Mining for New C and C Domains in Live Networks with Adapive Control Protocol Templates](/research-papers/security/ExecScent- Mining for New C and C Domains in Live Networks with Adapive Control Protocol Templates.pdf)
+* [ExecScent- Mining for New C and C Domains in Live Networks with Adaptive Control Protocol Templates - slides](/research-papers/security/ExecScent- Mining for New C and C Domains in Live Networks with Adapive Control Protocol Templates - slides.pdf)
+* [ExecScent- Mining for New C and C Domains in Live Networks with Adaptive Control Protocol Templates](/research-papers/security/ExecScent- Mining for New C and C Domains in Live Networks with Adapive Control Protocol Templates.pdf)
 * [Exposure - Finding malicious domains using passive dns analysis](/research-papers/security/Exposure - Finding malicious domains using passive dns analysis.pdf)
 * [FiG - Automatic Fingerprint Generation](/research-papers/security/FiG - Automatic Fingerprint Generation.pdf)
 * [FLIPS - Hybrid Adaptive Intrusion Prevention](/research-papers/security/FLIPS - Hybrid Adaptive Intrusion Prevention.pdf)
@@ -49,7 +53,7 @@ Over the past several years I have collected and read many security research pap
 * [Leveraging Honest Users - Stealth Command-and-Control of Botnets](/research-papers/security/Leveraging Honest Users - Stealth Command-and-Control of Botnets.pdf)
 * [Local System Security via SSHD Instrumentation  ](/research-papers/security/Local System Security via SSHD Instrumentation  .pdf)
 * [Machine learning in adversarial environments](/research-papers/security/Machine learning in adversarial environments.pdf)
-* [Malware vs Big Data (Ubrella Labs)](/research-papers/security/Malware vs Big Data (Ubrella Labs).pdf)
+* [Malware vs. Big Data (Umbrella Labs)](/research-papers/security/Malware vs Big Data (Ubrella Labs).pdf)
 * [McPAD - A multiple classifier system for accurate payload-based anomaly detection](/research-papers/security/McPAD - A multiple classifier system for accurate payload-based anomaly detection.pdf)
 * [Mining Botnet Sink holes - slides](/research-papers/security/Mining Botnet Sink holes - slides.pdf)
 * [MISHIMA - Multilateration of Internet hosts hidden using malicious fast-ﬂux agents](/research-papers/security/MISHIMA - Multilateration of Internet hosts hidden using malicious fast-ﬂux agents.pdf)
@@ -113,7 +117,7 @@ Over the past several years I have collected and read many security research pap
 * [A Preliminary Analysis of Vulnerability Scores for Attacks in Wild](/research-papers/security/A Preliminary Analysis of Vulnerability Scores for Attacks in Wild.pdf)
 * [Attacker Economics for Internet-scale Vulnerability Risk Assessment](/research-papers/security/Attacker Economics for Internet-scale Vulnerability Risk Assessment.pdf)
 * [Detecting Logic Vulnerabilities in E-Commerce Applications](/research-papers/security/Detecting Logic Vulnerabilities in E-Commerce Applications.pdf)
-* [ReDeBug - finding unpatched code clones in entire os distributions](/research-papers/security/ReDeBug - finding unpatched code clones in entire os distributions.pdf)
+* [ReDeBug - finding unpatched code clones in entire OS distributions](/research-papers/security/ReDeBug - finding unpatched code clones in entire os distributions.pdf)
 * [The Classification of Valuable Data in an Assumption of Breach Paradigm](/research-papers/security/The Classification of Valuable Data in an Assumption of Breach Paradigm.pdf)
 * [Toward Black-Box Detection of Logic Flaws in Web Applications](/research-papers/security/Toward Black-Box Detection of Logic Flaws in Web Applications.pdf)
 * [Vulnerability Extrapolation - Assisted Discovery of Vulnerabilities using Machine Learning - slides](/research-papers/security/Vulnerability Extrapolation - Assisted Discovery of Vulnerabilities using Machine Learning - slides.pdf)
@@ -128,11 +132,11 @@ Over the past several years I have collected and read many security research pap
 * [The Sniper Attack - Anonymously Deanonymizing and Disabling the Tor Network](/research-papers/security/The Sniper Attack - Anonymously Deanonymizing and Disabling the Tor Network.pdf)
 * [The Velocity of Censorship - High-Fidelity Detection of Microblog Post Deletions - slides](/research-papers/security/The Velocity of Censorship - High-Fidelity Detection of Microblog Post Deletions - slides.pdf)
 * [The Velocity of Censorship - High-Fidelity Detection of Microblog Post Deletions](/research-papers/security/The Velocity of Censorship - High-Fidelity Detection of Microblog Post Deletions.pdf)
-* [Tor vs NSA](/research-papers/security/Tor vs NSA.pdf)
+* [Tor vs. NSA](/research-papers/security/Tor vs NSA.pdf)
 
 ## Data Mining
 
-* [An Exploration of Geolocation and Traffic Visualisation Using Network Flows to Aid in Cyber Defence](/research-papers/security/An Exploration of Geolocation and Traffic Visualisation Using Network Flows to Aid in Cyber Defence.pdf)
+* [An Exploration of Geolocation and Traffic Visualization Using Network Flows to Aid in Cyber Defense](/research-papers/security/An Exploration of Geolocation and Traffic Visualisation Using Network Flows to Aid in Cyber Defence.pdf)
 * [DSpin - Detecting Automatically Spun Content on the Web](/research-papers/security/DSpin - Detecting Automatically Spun Content on the Web.pdf)
 * [Gyrus - A Framework for User-Intent Monitoring of Text-Based Networked Applications](/research-papers/security/Gyrus - A Framework for User-Intent Monitoring of Text-Based Networked Applications.pdf)
 * [Indexing Million of Packets per Second using GPUs](/research-papers/security/Indexing Million of Packets per Second using GPUs.pdf)
