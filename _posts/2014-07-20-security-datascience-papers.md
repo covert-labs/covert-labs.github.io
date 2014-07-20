@@ -3,7 +3,7 @@ layout: post
 title: Security Data Science Papers
 description: "A collection of security data science research papers"
 modified: 2014-07-20
-tags: [security, data science, research, big data, machine learning, data mining]
+tags: [security, data science, research, big data, machine learning, data mining, anomaly detection, models, intrusion detection, malware analysis, cyber, papers]
 image:
   feature: grey-scale-dark.jpg
 comments: true
