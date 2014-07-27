@@ -13,7 +13,8 @@ I tend to read a lot of technical books.  These lists are books I have read rece
 
 ###Currently Reading
  
- * [Graph Databases](http://www.amazon.com/gp/product/1449356265/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1449356265&linkCode=as2&tag=cyberanaly-20&linkId=KXBOT7AVIUDGFC72) by Ian Robinson, Jim Webber, and Emil Eifrem
+ * [Agile Data Science: Building Data Analytics Applications with Hadoop](http://www.amazon.com/gp/product/1449326269/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1449326269&linkCode=as2&tag=cyberanaly-20&linkId=WFSWAFRJ2QPXDER5) by Russell Jurney
+ * [Network Security Through Data Analysis: Building Situational Awareness](http://www.amazon.com/gp/product/1449357903/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1449357903&linkCode=as2&tag=cyberanaly-20&linkId=35TDX547RG2KPGAB) by Michael S Collins
 
 ###Data Mining/Machine Learning
 
@@ -24,7 +25,7 @@ I tend to read a lot of technical books.  These lists are books I have read rece
  * [Mahout in Action](http://www.amazon.com/gp/product/1935182684/ref=as_li_tf_tl?ie=UTF8&tag=cyberanaly-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=1935182684) by Sean Owen, Robin Anil, Ted Dunning, Ellen Friedman
  * [Programming Collective Intelligence: Building Smart Web 2.0 Applications](http://www.amazon.com/gp/product/0596529325/ref=as_li_tf_tl?ie=UTF8&tag=cyberanaly-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0596529325) by Toby Segaran
  * [Search Patterns: Design for Discovery](http://www.amazon.com/gp/product/0596802277/ref=as_li_tf_tl?ie=UTF8&tag=cyberanaly-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0596802277) by Peter Morville, Jeffery Callender
-
+* [Graph Databases](http://www.amazon.com/gp/product/1449356265/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1449356265&linkCode=as2&tag=cyberanaly-20&linkId=KXBOT7AVIUDGFC72) by Ian Robinson, Jim Webber, and Emil Eifrem
 
 ###Big Data/Cloud Computing
 
@@ -66,3 +67,4 @@ I tend to read a lot of technical books.  These lists are books I have read rece
  * [Social Intelligence: The New Science of Human Relationships](http://www.amazon.com/gp/product/055338449X/ref=as_li_tf_tl?ie=UTF8&tag=cyberanaly-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=055338449X) by Daniel Goleman
  * [The Back of the Napkin (Expanded Edition): Solving Problems and Selling Ideas with Pictures](http://www.amazon.com/gp/product/1591843065/ref=as_li_tf_tl?ie=UTF8&tag=cyberanaly-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=1591843065) by Dan Roam
  * [The Ten Faces of Innovation: Strategies for Heightening Creativity](http://www.amazon.com/gp/product/184668031X/ref=as_li_tf_tl?ie=UTF8&tag=cyberanaly-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=184668031X) by Tom Kelley
+
