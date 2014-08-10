@@ -2,7 +2,7 @@
 layout: post
 title: Security Data Science Papers
 description: "A collection of security data science research papers"
-modified: 2014-07-27
+modified: 2014-08-10
 tags: [security, data science, research, big data, machine learning, data mining, anomaly detection, models, intrusion detection, malware analysis, cyber, papers]
 image:
   feature: grey-scale-dark.jpg
@@ -102,6 +102,10 @@ Here is the entire collection:
 * [Understanding the Domain Registration Behavior of Spammers](/research-papers/security/Understanding the Domain Registration Behavior of Spammers.pdf)
 * [Understanding the Network-Level Behavior of Spammers](/research-papers/security/Understanding the Network-Level Behavior of Spammers.pdf)
 * [VAST- Network Visibility Across Space and Time](/research-papers/security/VAST- Network Visibility Across Space and Time.pdf)
+* [A Framework for the Application of Association Rule Mining in Large Intrusion Detection Infrastructures](/research-papers/security/A Framework for the Application of Association Rule Mining in Large Intrusion Detection Infrastructures.pdf)
+* [Application of the PageRank Algorithm to Alarm Graphs](/research-papers/security/Application of the PageRank Algorithm to Alarm Graphs.pdf)
+* [Finding The Needle - Suppression of False Alarms in Large Intrusion Detection Data Sets](/research-papers/security/Finding The Needle- Suppression of False Alarms in Large Intrusion Detection Data Sets.pdf)
+* [Heuristics for Improved Enterprise Intrusion Detection](/research-papers/security/Heuristics for Improved Enterprise Intrusion Detection (Jim Treinen PhD Thesis).pdf) by Jim Treinen
 
 
 ## Malware
