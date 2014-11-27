@@ -12,9 +12,10 @@ share: true
 I tend to read a lot of technical books.  These lists are books I have read recently that are relevant to this blog.
 
 ###Currently Reading
- 
- * [Network Security Through Data Analysis: Building Situational Awareness](http://www.amazon.com/gp/product/1449357903/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1449357903&linkCode=as2&tag=cyberanaly-20&linkId=35TDX547RG2KPGAB) by Michael S Collins
 
+ * [Thoughtful Machine Learning: A Test-Driven Approach](http://www.amazon.com/gp/product/1449374069/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1449374069&linkCode=as2&tag=cyberanaly-20&linkId=VSR7SO4SW4UMHAJB) by Matthew Kirk
+ 
+ 
 ###Data Mining/Machine Learning
 
  * [A First Course in Statistical Programming with R](http://www.amazon.com/gp/product/0521694248/ref=as_li_tf_tl?ie=UTF8&tag=cyberanaly-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0521694248) by W. John Braun, Duncan J. Murdoch
@@ -37,6 +38,7 @@ I tend to read a lot of technical books.  These lists are books I have read rece
  * [Hadoop: The Definitive Guide](http://www.amazon.com/gp/product/1449311520/ref=as_li_tf_tl?ie=UTF8&tag=cyberanaly-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=1449311520) by Tom White
  * [Pro Hadoop (Expert's Voice in Open Source)](http://www.amazon.com/gp/product/1430219424/ref=as_li_tf_tl?ie=UTF8&tag=cyberanaly-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=1430219424) by Jason Venner
  * [Service Oriented Architecture with Java: Using SOA and web services to build powerful Java applications](http://www.amazon.com/gp/product/1847193218/ref=as_li_tf_tl?ie=UTF8&tag=cyberanaly-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=1847193218) by Binildas A. Christudas, Malhar Barai, Vincenzo Caselli
+ * [I Heart Logs: Event Data, Stream Processing, and Data Integration](http://www.amazon.com/gp/product/1491909382/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1491909382&linkCode=as2&tag=cyberanaly-20&linkId=GTQ3ONHIJYNMKXQM) by Jay Kreps
 
 ###Security/Hacking/Forensics
 
@@ -48,6 +50,8 @@ I tend to read a lot of technical books.  These lists are books I have read rece
  * [Practical Intrusion Analysis: Prevention and Detection for the Twenty-First Century](http://www.amazon.com/gp/product/0321591801/ref=as_li_tf_tl?ie=UTF8&tag=cyberanaly-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0321591801) by Ryan Trost
  * [Security Log Management: Identifying Patterns in the Chaos](http://www.amazon.com/gp/product/1597490423/ref=as_li_tf_tl?ie=UTF8&tag=cyberanaly-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=1597490423) by Jacob Babbin, Dave Kleiman, Everett F. Carter Jr., Jeremy Faircloth, Mark Burnett, Esteban Gutierrez
  * [SiLK Analyst Handbook (PDF)](http://tools.netsa.cert.org/silk/analysis-handbook.pdf)
+ * [Network Security Through Data Analysis: Building Situational Awareness](http://www.amazon.com/gp/product/1449357903/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1449357903&linkCode=as2&tag=cyberanaly-20&linkId=35TDX547RG2KPGAB) by Michael S Collins
+
 
 ###Security/Intel
 
