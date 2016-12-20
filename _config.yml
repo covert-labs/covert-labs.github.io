@@ -38,6 +38,8 @@ bing_verify:
 links:
   - title: Tools
     url: /security-tools
+  - title: Data
+    url: /data-links
   # - title: External Link
   #   url: http://mademistakes.com
   #   external: true
