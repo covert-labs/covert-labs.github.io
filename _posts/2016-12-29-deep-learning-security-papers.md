@@ -55,6 +55,7 @@ Throughout this research, I came across several security related academic and pr
 * [MtNet: A Multi-Task Neural Network for Dynamic Malware Classification](/research-papers/deep-learning-security/MtNet - A Multi-Task Neural Network for Dynamic Malware Classification.pdf)
 * [Network Anomaly Detection with the Restricted Boltzmann Machine](/research-papers/deep-learning-security/Network anomaly detection with the restricted Boltzmann machine.pdf)
 * [Predicting Domain Generation Algorithms with Long Short-Term Memory Networks](/research-papers/deep-learning-security/Predicting Domain Generation Algorithms with Long Short-Term Memory Networks.pdf)
+* [Recognizing Functions in Binaries with Neural Networks](/research-papers/deep-learning-security/Recognizing Functions in Binaries with Neural Networks.pdf)
 * [The Limitations of Deep Learning in Adversarial Settings](/research-papers/deep-learning-security/The limitations of deep learning in adversarial settings.pdf)
 * [Toward large-scale vulnerability discovery using Machine Learning](/research-papers/deep-learning-security/Toward large-scale vulnerability discovery using Machine Learning.pdf)
 
