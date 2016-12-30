@@ -10,6 +10,8 @@ comments: true
 share: true
 ---
 
+<img src="/images/deep-learning-logo.png">
+
 This is another quick post.  Over the past few months I started researching [deep learning](https://en.wikipedia.org/wiki/Deep_learning) to determine if it may be useful for solving security problems.  This post on [The Unreasonable Effectiveness of Recurrent Neural Networks](http://karpathy.github.io/2015/05/21/rnn-effectiveness/) was what got me interested in this topic, and I highly recommend reading it in its entirety.  
 
 Throughout this research, I came across several security related academic and professional research papers on security topics that use Deep Learning as part of their research.  What follows is a list of the papers/slides/videos that I found, and these may be useful to others.  If you have others that you think should be added to this list, please ping me: [@jason_trost](https://twitter.com/jason_trost).
