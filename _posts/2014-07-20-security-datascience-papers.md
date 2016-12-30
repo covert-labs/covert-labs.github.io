@@ -134,7 +134,7 @@ Here is the entire collection:
 * [Tracking Memory Writes for Malware Classification and Code Reuse Identification](/research-papers/security/Tracking Memory Writes for Malware Classification and Code Reuse Identification.pdf)
 * [Using File Relationships in Malware Classification](/research-papers/security/Using File Relationships in Malware Classification.pdf)
 * [VAMO - Towards a Fully Automated Malware Clustering Validity Analysis](/research-papers/security/VAMO - Towards a Fully Automated Malware Clustering Validity Analysis.pdf)
-* [Selecting Features to Classify Malware](Selecting Features to Classify Malware.pdf) by Karthik Raman
+* [Selecting Features to Classify Malware](/research-papers/security/Selecting Features to Classify Malware.pdf) by Karthik Raman
 
 ## Data Collection
 
