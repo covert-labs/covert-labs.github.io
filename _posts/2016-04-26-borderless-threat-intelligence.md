@@ -109,3 +109,5 @@ If you would like to learn more about these concepts and how to operationalize t
 <div style="margin-bottom:5px"> 
 <strong><a href="//www.slideshare.net/jasontrost/rcisc-summit-2016-borderless-threat-intelligence" title="R-CISC Summit 2016 Borderless Threat Intelligence" target="_blank">R-CISC Summit 2016 Borderless Threat Intelligence</a></strong> from <strong><a target="_blank" href="//www.slideshare.net/jasontrost">Jason Trost</a></strong> 
 </div>
+
+**Note**: this was originally published [here](https://www.tripwire.com/state-of-security/featured/borderless-threat-intelligence-using-external-threat-intelligence-for-brand-supply-chain-monitoring/).
