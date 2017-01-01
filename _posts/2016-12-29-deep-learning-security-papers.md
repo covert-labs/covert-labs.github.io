@@ -2,7 +2,7 @@
 layout: post
 title: Deep Learning Security Papers
 description: "Research papers on various security topics that use Deep Learning"
-modified: 2016-12-29
+modified: 2017-01-01
 tags: [security, research, deep learning, machine learning, data science]
 image:
   feature: grey-scale-dark.jpg
@@ -11,6 +11,8 @@ share: true
 ---
 
 <img src="/images/deep-learning-logo.png">
+
+**Update (1/1/2017)**: I will not be updating this page and instead will make all updates to this page: [The Definitive Security Data Science and Machine Learning Guide](/the-definitive-security-datascience-and-machinelearning-guide/) (see [Deep Learning and Security Papers](/the-definitive-security-datascience-and-machinelearning-guide/#deep-learning-and-security-papers) section).
 
 This is another quick post.  Over the past few months I started researching [deep learning](https://en.wikipedia.org/wiki/Deep_learning) to determine if it may be useful for solving security problems.  This post on [The Unreasonable Effectiveness of Recurrent Neural Networks](http://karpathy.github.io/2015/05/21/rnn-effectiveness/) was what got me interested in this topic, and I highly recommend reading it in its entirety.  
 
