@@ -41,6 +41,8 @@ links:
     url: /security-tools
   - title: Data
     url: /data-links
+  - title: Threat Intelligence
+    url: /threat-intelligence
   # - title: External Link
   #   url: http://mademistakes.com
   #   external: true
