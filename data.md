@@ -15,6 +15,7 @@ Collection of Security and Network Data Resources.  [Mike Sconzo's](https://twit
 
 See the [Threat Intelligence](/threat-intelligence/) page for a massive list of threat intelligence feeds.
 
+* ~~[Alexa Top 1m Domains](http://s3.amazonaws.com/alexa-static/top-1m.csv.zip)~~ (No longer offered by Alexa)
 * [betterdefaultpasslist](https://github.com/govolution/betterdefaultpasslist) - "list includes default credentials from various manufacturers for their products like NAS, ERP, ICS etc., that are used for standard products like mssql, vnc, oracle and so on"
 * [Cisco Umbrella Top 1 Million Domains](https://blog.opendns.com/2016/12/14/cisco-umbrella-1-million/) ([data](http://s3-us-west-1.amazonaws.com/umbrella-static/top-1m.csv.zip))
 * [Common Crawl](http://commoncrawl.org/) - TBs of publicly available web crawl data hosted in Amazon S3.
@@ -40,3 +41,4 @@ See the [Threat Intelligence](/threat-intelligence/) page for a massive list of 
 * [Virusshare](https://virusshare.com/)
 * [VX Heaven](http://vxheaven.org/faq.php)
 * [Web Data Commons (Common Crawl derivatives)](http://webdatacommons.org/) - Extracting Structured Data from the Common Crawl
+
