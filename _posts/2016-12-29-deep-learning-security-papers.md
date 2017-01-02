@@ -82,6 +82,7 @@ Throughout this research, I came across several security related academic and pr
 * [deeplearning.net Reading List](http://deeplearning.net/reading-list/)
 * [Deep Learning Patterns](http://www.deeplearningpatterns.com/doku.php/start)
 * [International Conference on Learning Representations (ICLR) 2017 Conference CFP](https://openreview.net/group?id=ICLR.cc/2017/conference)
+* [Practical Deep Learning For Coders by fast.ai](http://course.fast.ai/)
 
 
 --Jason
