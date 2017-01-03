@@ -32,6 +32,7 @@ See the [Threat Intelligence](/threat-intelligence/) page for a massive list of 
 * [NSL-KDD Data Sets](https://github.com/defcom17/NSL_KDD)
 * [Onionscan data sample](https://github.com/automatingosint/osint_public/tree/master/onionrunner)
 * [Open Data Sets](http://csr.lanl.gov/data/)
+* [PublicDB.host](https://publicdb.host/index.php) ([data](https://cdn.publicdb.host/)) - collection of dumped databases from many major breaches.
 * [Quantcast top Million Domains](https://ak.quantcast.com/quantcast-top-sites.zip)
 * [Scans.io](https://scans.io/) - publicly available Internet scale port scan and DNS data.
 * [SecRepo.com - Samples of Security Related Data](http://www.secrepo.com/)
