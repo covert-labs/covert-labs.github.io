@@ -39,7 +39,10 @@ See the [Threat Intelligence](/threat-intelligence/) page for a massive list of 
 * [Stratosphere IPS Data Sets](https://stratosphereips.org/category/dataset.html)
 * [The ADFA Intrusion Detection Data Sets](https://www.unsw.adfa.edu.au/australian-centre-for-cyber-security/cybersecurity/ADFA-IDS-Datasets/)
 * [VERIS Community Database](https://github.com/vz-risk/VCDB)
+* [ViewDns.info](http://viewdns.info/data/) - ccTLD Zone Files / Domain Name Lists for sale.
 * [Virusshare](https://virusshare.com/)
 * [VX Heaven](http://vxheaven.org/faq.php)
 * [Web Data Commons (Common Crawl derivatives)](http://webdatacommons.org/) - Extracting Structured Data from the Common Crawl
-
+* [WhoisXML Domain Registration Feeds (Commercial)](https://www.whoisxmlapi.com):
+    * [Whois Database Download](https://www.whoisxmlapi.com/whois-database-download.php)
+    * [Newly Registered & Just Expired Domains](https://www.whoisxmlapi.com/newly-registered-domains.php)
