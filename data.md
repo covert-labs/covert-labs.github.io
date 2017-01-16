@@ -25,6 +25,7 @@ See the [Threat Intelligence](/threat-intelligence/) page for a massive list of 
 * [DARPA Intrusion Detection Data Sets](https://www.ll.mit.edu/ideval/data/)
 * [Data Capture from National Security Agency at CDX](http://www.westpoint.edu/crc/SitePages/DataSets.aspx)
 * [Data Driven Security Dataset Collection](http://datadrivensecurity.info/blog/pages/dds-dataset-collection.html)
+* [DGArchive](https://dgarchive.caad.fkie.fraunhofer.de/site/) - DGA Domains Database.
 * [heralding honeypot log sample (3077 events)](/data/heralding_activity.log.gz)
 * [Malicious URLs Data Sets](http://sysnet.ucsd.edu/projects/url/)
 * [Malware Training Sets: A machine learning dataset for everyone](http://marcoramilli.blogspot.cz/2016/12/malware-training-sets-machine-learning.html) ([data](https://github.com/marcoramilli/MalwareTrainingSets))
