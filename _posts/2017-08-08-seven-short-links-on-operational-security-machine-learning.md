@@ -10,8 +10,6 @@ comments: true
 share: true
 ---
 
-# 7 Short Links on Operational Security Machine Learning
-
 **Beehive: Large-Scale Log Analysis for Detecting Suspicious Activity in Enterprise Networks**
 Ting-Fang Yen, Alina Oprea, Kaan Onarlioglu, Todd Leetham, William Robertson, Ari Juels, and Engin Kirda 
 In Proceedings of Annual Computer Security Applications Conference (ACSAC), 2013 [PDF](http://www.ccs.neu.edu/home/alina/papers/Beehive.pdf)
