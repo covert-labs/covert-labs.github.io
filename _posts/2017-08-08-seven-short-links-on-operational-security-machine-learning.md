@@ -10,33 +10,33 @@ comments: true
 share: true
 ---
 
-**Beehive: Large-Scale Log Analysis for Detecting Suspicious Activity in Enterprise Networks**
+**[Beehive: Large-Scale Log Analysis for Detecting Suspicious Activity in Enterprise Networks](http://www.ccs.neu.edu/home/alina/papers/Beehive.pdf)**
 Ting-Fang Yen, Alina Oprea, Kaan Onarlioglu, Todd Leetham, William Robertson, Ari Juels, and Engin Kirda 
-In Proceedings of Annual Computer Security Applications Conference (ACSAC), 2013 [PDF](http://www.ccs.neu.edu/home/alina/papers/Beehive.pdf)
+In Proceedings of Annual Computer Security Applications Conference (ACSAC), 2013
 
-**An Epidemiological Study of Malware Encounters in a Large Enterprise**
+**[An Epidemiological Study of Malware Encounters in a Large Enterprise](http://www.ccs.neu.edu/home/alina/papers/InfectionDemographics.pdf)**
 Ting-Fang Yen, Victor Heorhiadi, Alina Oprea, Michael K. Reiter, and Ari Juels 
-In Proceedings of ACM Conference on Computer and Communications Security (CCS), 2014 [PDF](http://www.ccs.neu.edu/home/alina/papers/InfectionDemographics.pdf)
+In Proceedings of ACM Conference on Computer and Communications Security (CCS), 2014
 
-**Detection of Early-Stage Enterprise Infection by Mining Large-Scale Log Data**
+**[Detection of Early-Stage Enterprise Infection by Mining Large-Scale Log Data](http://www.ccs.neu.edu/home/alina/papers/EnterpriseInfection.pdf)**
 Alina Oprea, Zhou Li, Ting-Fang Yen, Sang H. Chin, and Sumyah Alrwais 
-In Proceedings of IEEE/IFIP International Conference on Dependable Systems and Networks (DSN), 2015 [PDF](http://www.ccs.neu.edu/home/alina/papers/EnterpriseInfection.pdf)
+In Proceedings of IEEE/IFIP International Conference on Dependable Systems and Networks (DSN), 2015
 
-**Segugio: Efficient Behavior-Based Tracking of Malware-Control Domains in Large ISP Networks**
+**[Segugio: Efficient Behavior-Based Tracking of Malware-Control Domains in Large ISP Networks](http://roberto.perdisci.com/publications/publication-files/segugio_dsn.pdf)**
 Babak Rahbarinia and Manos Antonakakis
-In Proceedings of IEEE/IFIP International Conference on Dependable Systems and Networks (DSN), 2015 [PDF](http://roberto.perdisci.com/publications/publication-files/segugio_dsn.pdf)
+In Proceedings of IEEE/IFIP International Conference on Dependable Systems and Networks (DSN), 2015
 
-**Malicious Behavior Detection using Windows Audit Logs**
+**[Malicious Behavior Detection using Windows Audit Logs](https://arxiv.org/pdf/1506.04200.pdf)**
 Konstantin Berlin, David Slater, Joshua Saxe
-In Proceedings of the 8th ACM Workshop on Artificial Intelligence and Security (AISec) 2015 [PDF](https://arxiv.org/pdf/1506.04200.pdf)
+In Proceedings of the 8th ACM Workshop on Artificial Intelligence and Security (AISec) 2015
 
-**Operational security log analytics for enterprise breach detection**
+**[Operational security log analytics for enterprise breach detection](http://www.ccs.neu.edu/home/alina/papers/LogAnalytics.pdf)**
 Zhou Li and Alina Oprea 
-In Proceedings of the First IEEE Cybersecurity Development Conference (SecDev), 2016 [PDF](http://www.ccs.neu.edu/home/alina/papers/LogAnalytics.pdf)
+In Proceedings of the First IEEE Cybersecurity Development Conference (SecDev), 2016
 
-**Lens on the endpoint: Hunting for malicious software through endpoint data analysis.**
+**[Lens on the endpoint: Hunting for malicious software through endpoint data analysis.](http://www.ccs.neu.edu/home/alina/papers/Endpoint.pdf)**
 Ahmet Buyukkayhan, Alina Oprea, Zhou Li, and William Robertson. 
-In Proceedings of Recent Advances in Intrusion Detection (RAID), 2017 [PDF](http://www.ccs.neu.edu/home/alina/papers/Endpoint.pdf)
+In Proceedings of Recent Advances in Intrusion Detection (RAID), 2017
 
 
 --Jason
