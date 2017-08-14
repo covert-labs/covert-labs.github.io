@@ -3,7 +3,7 @@ layout: page
 permalink: /reading-list/
 title: Reading List
 description: "Various books I recommend"
-tags: [reading list]
+tags: [reading list, books]
 image:
   feature: grey-scale-dark.jpg
 share: true
@@ -11,10 +11,6 @@ share: true
 
 I tend to read a lot of technical books.  These lists are books I have read recently that are relevant to this blog.
 
-###Currently Reading
-
- * [Thoughtful Machine Learning: A Test-Driven Approach](http://www.amazon.com/gp/product/1449374069/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1449374069&linkCode=as2&tag=cyberanaly-20&linkId=VSR7SO4SW4UMHAJB) by Matthew Kirk
- 
  
 ###Data Mining/Machine Learning
 
