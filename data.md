@@ -26,6 +26,7 @@ See the [Threat Intelligence](/threat-intelligence/) page for a massive list of 
 * [Data Capture from National Security Agency at CDX](http://www.westpoint.edu/crc/SitePages/DataSets.aspx)
 * [Data Driven Security Dataset Collection](http://datadrivensecurity.info/blog/pages/dds-dataset-collection.html)
 * [DGArchive](https://dgarchive.caad.fkie.fraunhofer.de/site/) - DGA Domains Database.
+* [Domains-index.com](https://domains-index.com/) - ccTLD Zone Files / Domain Name Lists for sale.  See [Free Domain Lists](https://domains-index.com/downloads/category/free/)
 * [heralding honeypot log sample (3077 events)](/data/heralding_activity.log.gz)
 * [Malicious URLs Data Sets](http://sysnet.ucsd.edu/projects/url/)
 * [Malware Training Sets: A machine learning dataset for everyone](http://marcoramilli.blogspot.cz/2016/12/malware-training-sets-machine-learning.html) ([data](https://github.com/marcoramilli/MalwareTrainingSets))
