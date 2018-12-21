@@ -17,7 +17,7 @@ permalink: /post/20404247709/hadoop-binary-analysis-framework
 
 This is a quick post.  I wrote this little framework for using Hadoop to analyze lots of small files.  This may not be the most optimal way of doing this, but it worked well and makes repeated analysis tasks easy and scalable.
 
-[https://github.com/jt6211/hadoop-binary-analysis](https://github.com/jt6211/hadoop-binary-analysis)
+[https://github.com/jatrost/hadoop-binary-analysis](https://github.com/jatrost/hadoop-binary-analysis)
 
 I recently needed a quick way to analyze millions of small binary files (from 100K-19MB each) and
 I wanted a scalable way to repeatedly do this sort of analysis.  I chose Hadoop as the platform,
