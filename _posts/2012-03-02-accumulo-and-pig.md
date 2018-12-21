@@ -11,7 +11,7 @@ share: true
 permalink: /post/18605091231/accumulo-and-pig
 ---
 
-I just posted a functional AccumuloStorage module to [github](https://github.com/jt6211/accumulo-pig).
+I just posted a functional AccumuloStorage module to [github](https://github.com/jatrost/accumulo-pig).
 
 Here's how you use it (also in the github README)
 
