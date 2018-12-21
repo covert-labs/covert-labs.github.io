@@ -560,8 +560,8 @@ Further details and exploration of this data in Accumulo will have to wait for a
 
 I ended up posting all the modified code from Gora (accumulo patch) and Nutchgora (patches for getting gora-accumulo working) to my github.  Check it out.
 
-* [Nutchgora + Accumulo branch](https://github.com/jt6211/nutch/tree/gora-accumulo)
-* [Gora + Accumulo branch](https://github.com/jt6211/gora/tree/gora-accumulo)<br />
+* [Nutchgora + Accumulo branch](https://github.com/jatrost/nutch/tree/gora-accumulo)
+* [Gora + Accumulo branch](https://github.com/jatrost/gora/tree/gora-accumulo)<br />
 
 Let me know if you have any questions...
 
