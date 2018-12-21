@@ -19,7 +19,7 @@ There are some interesting applications of this type of system, like using the e
 
 For more details check out my github repo.  The README covers DNS collection and geo enrichment.  I have code checked in that will store this data in [Accumulo](http://accumulo.apache.org/) using a few different storage/access patterns, but more explanation will come later as I have time.
 
-https://github.com/jt6211/hadoop-dns-mining
+https://github.com/jatrost/hadoop-dns-mining
 
 --Jason<br />
 [@jason_trost](https://twitter.com/#!/jason_trost)
