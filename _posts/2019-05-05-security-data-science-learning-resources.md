@@ -10,7 +10,7 @@ comments: true
 share: true
 ---
 
-This short post catalogs some resources that may be useful for those interested in security data science.  It is not meant to be an exhaustive list. It is meant to be a currated list to help you get started.
+This short post catalogs some resources that may be useful for those interested in security data science.  It is not meant to be an exhaustive list. It is meant to be a curated list to help you get started.
 
 ### Staying Current with Security Data Science
 
@@ -18,9 +18,9 @@ Here is my current strategy for staying current with security data science resea
 
 1. Google Scholar Publication alerts on known respected researchers.
 2. Google Scholar Citation alerts on interesting or noteworthy papers.  
-3. Follow security ML researchers on Twitter and Medium.  They frequenly share interesting and cutting edge research papers / videos / blogs.
+3. Follow security ML researchers on Twitter and Medium.  They frequently share interesting and cutting edge research papers / videos / blogs.
 4. Periodically review proceedings from noteworthy security conferences.
-5. Skim published securit conference videos from [Irongeek](http://www.irongeek.com/) looking for topics of interest.
+5. Skim published security conference videos from [Irongeek](http://www.irongeek.com/) looking for topics of interest.
 
 ### Google Scholar alerts
 
@@ -82,7 +82,7 @@ New article alerts on these authors with the **bolded** being the most relevant 
 
 ### Twitter
 
-Twitter can be a gold mine for new and relevant ideas, blogs, presentations, etc for security data science.  You just need to make sure you continuely follow the right folks.  Here is a short list of thought leaders in this space (if I left you off it is my oversight so please don't take offense).
+Twitter can be a gold mine for new and relevant ideas, blogs, presentations, etc for security data science.  You just need to make sure you continually follow the right folks.  Here is a short list of thought leaders in this space (if I left you off it is my oversight so please don't take offense).
 
 * [@\_delta\_zero](https://twitter.com/_delta_zero)
 * [@alexcpsec](https://twitter.com/alexcpsec)
@@ -124,7 +124,7 @@ Below are several interesting security conferences where research is published o
 * [Workshop on Managing Insider Security Threats (In Conjunction with ACM CCS 2017)](http://isyou.info/conf/mist17/)
 * [Workshop on Mining and Learning with Graphs (colocated with KDD)](http://www.mlgworkshop.org/2017/)
 
-This page is also an excellent resource in general for top academic security conferences: [Top Academic Security conferences list](http://faculty.cs.tamu.edu/guofei/sec_conf_stat.htm).  The major industry focused security conferences like [Blackhat](https://www.blackhat.com/), [RSA](https://www.rsaconference.com/), [Defcon](https://www.defcon.org/), [BSides\*](http://www.securitybsides.com/w/page/12194156/FrontPage), [DerbyCon](https://www.derbycon.com/), and [ShmooCon](https://www.shmoocon.org/) all frequently have talks relevant to security data science, but this is not their primary focus, so they are not expicitly called out above.
+This page is also an excellent resource in general for top academic security conferences: [Top Academic Security conferences list](http://faculty.cs.tamu.edu/guofei/sec_conf_stat.htm).  The major industry focused security conferences like [Blackhat](https://www.blackhat.com/), [RSA](https://www.rsaconference.com/), [Defcon](https://www.defcon.org/), [BSides\*](http://www.securitybsides.com/w/page/12194156/FrontPage), [DerbyCon](https://www.derbycon.com/), and [ShmooCon](https://www.shmoocon.org/) all frequently have talks relevant to security data science, but this is not their primary focus, so they are not explicitly called out above.
 
 ## Learning Resources
 
