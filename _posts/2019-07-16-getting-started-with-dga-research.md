@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with DGA Domain Detection Research
+title: Getting Started with DGA Domain Detection Research
 description: "Resources for getting started with research on Domain Generation Algorithm (DGA) Domain Detection"
 modified: 2019-07-16
 tags: [security, research, machine learning, deep learning, DGA]
@@ -11,6 +11,8 @@ share: true
 ---
 
 This post provides resources for getting started with research on Domain Generation Algorithm (DGA) Domain Detection.
+
+DGA Domains are commonly used by malware as a mechanism to maintain a command and control (C2) and make it more difficult for defenders to block. Prior to DGA domains, most malware used a small hardcoded list of IPs or domains. Once these IPs / domains were discovered they could be blocked by defenders or taken down for abuse. DGA domains make this more difficult since the C2 domain changes frequently and enumerating and blocking all generated domains can be expensive.
 
 Recently, I have been working on a research project recently related to DGA detection (hopefully it will turn into a blogpost or a presentation somewhere), and it occurred to me that DGA is probably one of the most accessible areas for those getting into security data science due to the availability of so much labelled data and the availability of so many open source implementations of DGA detection.  One might argue that this means it is not an area worth researching due to saturation, but I think that depends on your situation/goals.  This short posts outlines some of the resources that I found useful for DGA research.
 
@@ -134,6 +136,7 @@ This section provides links to a few models that could be used as baselines for 
 * [A Novel Detection Method for Word-Based DGA](https://link.springer.com/chapter/10.1007/978-3-030-00009-7_43)
 * [A Survey on Malicious Domains Detection through DNS Data Analysis](https://arxiv.org/pdf/1805.08426.pdf)
 * [Detecting DGA domains with recurrent neural networks and side information](https://arxiv.org/pdf/1810.02023.pdf)
+* [CharBot: A Simple and Effective Method for Evading DGA Classifiers](https://arxiv.org/pdf/1905.01078.pdf)
 
 ---
 
