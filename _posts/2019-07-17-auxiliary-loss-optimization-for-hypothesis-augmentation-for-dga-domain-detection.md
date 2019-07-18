@@ -2,7 +2,7 @@
 layout: post
 title: "Auxiliary Loss Optimization for Hypothesis Augmentation for DGA Domain Detection"
 description: "Applying Deep Learning and Auxiliary Loss Optimization for Hypothesis Augmentation (ALOHA) to Domain Generation Algorithm (DGA) Domain Detection"
-modified: 2019-07-17
+modified: 2019-07-18
 tags: [security, research, machine learning, deep learning, DGA, DNS]
 image:
   feature: grey-scale-dark.jpg
