@@ -12,6 +12,8 @@ share: true
 
 This post outlines some experiments I ran using Auxiliary Loss Optimization for Hypothesis Augmentation (ALOHA) for DGA domain detection.
 
+**(Update 2019-07-18)** After getting feedback from one of the ALOHA paper authors, I [modified my code](https://github.com/covert-labs/aloha_dga/pull/2) to set loss weights for the auxilary targets as they did in their paper (Weights used: main target 1.0, auxilary targets 0.1).  I also added 3 word-based/dictionary DGAs.  All diagrams and metrics have been updated to reflect this.
+
 I recently read this paper [ALOHA: Auxiliary Loss Optimization for Hypothesis Augmentation
 ](https://arxiv.org/abs/1903.05700) by Ethan M. Rudd, Felipe N. Ducau, Cody Wild, Konstantin Berlin, and Richard Harang from Sophos Lab.  This [research](https://www.usenix.org/conference/usenixsecurity19/presentation/rudd) will be presented at [USENIX Security 2019](https://www.usenix.org/conference/usenixsecurity19) in Aug, 2019.  This paper shares findings that supplying more prediction targets to their model at training time, they can improve the prediction performance of the primary prediction target.  More specifically, they modify a deep learning based model for detecting malware (binary classifier) to also predict things like individual vendor predictions, malware tags, and number of VT detections.  Their "auxiliary loss architecture yields a significant reduction in detection error rate (false negatives) of 42.6% at a false positive rate (FPR) of 10^−3 when compared to a similar model with only one target, and a decrease of 53.8% at 10^−5 FPR."
 
@@ -32,10 +34,11 @@ I decided to explore the last use case of how well auxiliary loss optimizations 
 
 ### Data:
 
-For this work, I used the same data sources selected by Endgame's dga_predict.
+For this work, I used the same data sources selected by Endgame's dga_predict (but I added 3 additional DGAs: gozi, matsnu, and suppobox).
 
 * Alexa top 1m domains
-* DGA domains for the following malware families: banjori, corebot, cryptolocker, dircrypt, kraken, lockyv2, pykspa, qakbot, ramdo, ramnit, simda
+* classical DGA domains for the following malware families: banjori, corebot, cryptolocker, dircrypt, kraken, lockyv2, pykspa, qakbot, ramdo, ramnit, and simda.
+* Word-based/dictionary DGA domains for the following malware families - gozi, matsnu, and suppobox
 
 ### Baseline Models: 
 
@@ -72,18 +75,21 @@ In [3]: data = pickle.loads(open('traindata.pkl', 'rb').read())
 
 In [4]: Counter([d[0] for d in data]).most_common(100)
 Out[4]: 
-[('benign', 109935),
- ('corebot', 10000),
- ('dircrypt', 10000),
- ('kraken', 10000),
- ('pykspa', 10000),
+[('benign', 139935),
  ('qakbot', 10000),
+ ('dircrypt', 10000),
+ ('pykspa', 10000),
+ ('corebot', 10000),
+ ('kraken', 10000),
+ ('suppobox', 10000),
+ ('gozi', 10000),
  ('ramnit', 10000),
+ ('matsnu', 10000),
  ('locky', 9999),
  ('banjori', 9984),
- ('cryptolocker', 9984),
+ ('simda', 9984),
  ('ramdo', 9984),
- ('simda', 9984)]
+ ('cryptolocker', 9984)]
 
 ```
 
@@ -91,16 +97,17 @@ Out[4]:
 
 Model AUC scores (sorted by AUC):
 
-* cnn_lstm: 0.9978
-* aloha_lstm: 0.9975
-* lstm: 0.9973
-* aloha_cnn_lstm: 0.9961
-* cnn: 0.9959
-* aloha_cnn: 0.9931
-* bigram: 0.9821
-* aloha_bigram: 0.9788
+* aloha_bigram 0.9435
+* bigram 0.9444
+* cnn 0.9817
+* aloha_cnn 0.9820
+* lstm 0.9944
+* aloha_cnn_lstm 0.9947
+* aloha_lstm 0.9950
+* cnn_lstm 0.9957
 
-Overall, by AUC, the ALOHA technique only seemed to improve the LSTM model and only marginally.  The ROC curves show reductions in the error rates at very low false positive rates (between 10^-5 and 10^-3) which is similar to those gains seen in the ALOHA paper, yet the paper's gains appeared much larger.  
+
+Overall, by AUC, the ALOHA technique only seemed to improve the LSTM and CNN models and only marginally.  The ROC curves show reductions in the error rates at very low false positive rates (between 10^-5 and 10^-3) which is similar to those gains seen in the ALOHA paper, yet the paper's gains appeared much larger.  
 
 <a href="/images/aloha-dga/results-linear-all-1.0.png"><img src="/images/aloha-dga/results-linear-all-1.0.png" width="400px"></a><br>
 **ROC: All Models Linear Scale**
@@ -120,6 +127,15 @@ Overall, by AUC, the ALOHA technique only seemed to improve the LSTM model and o
 <a href="/images/aloha-dga/results-logscale-lstm-0.000001-to-1.05.png"><img src="/images/aloha-dga/results-logscale-lstm-0.000001-to-1.05.png" width="400px"></a><br>
 **ROC: LSTM Models Log Scale**
 
+**Heatmap**
+
+Below is a heatmap showing the percentage of detections across all the malware families for each model.  Low numbers are good for the benign label (top row), high numbers are good for all the others.
+
+Note the last 3 rows are all word-based/dictionary DGAs.  It is interesting, although not too surprising that the models that include LSTMs tended to do better against these DGAs.
+
+I annotated with green boxes places where the ALOHA models did better.  This seems to be most apparent with the models that include LSTMs and for the word-based/dictionary DGAs.
+
+<a href="/images/aloha-dga/heatmap.png"><img src="/images/aloha-dga/heatmap.png" width="400px"></a><br>
 
 ### Future Work:
 
