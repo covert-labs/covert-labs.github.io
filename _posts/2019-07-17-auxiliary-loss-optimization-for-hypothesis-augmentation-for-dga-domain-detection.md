@@ -28,7 +28,7 @@ This paper made me wonder how well this technique would work for other areas in 
 * Detecting malicious C2 domains - possible auxiliary labels: malware family names, DGA or not, proxy categories.
 * Detecting DGA Domains - possible auxiliary labels: malware families, DGA type (wordlist, hex based, alphanumeric, etc).
 
-I decided to explore the last use case of how well auxiliary loss optimizations would improve DGA domain detections.  For this work I identified 4 model DGA models and used these as baselines and ran some experiments.  All code from these experiments is hosted [here](https://github.com/covert-labs/aloha_dga).  This code is based heavily off of Endgame's [dga_predict](https://github.com/endgameinc/dga_predict), but with many [modifications](https://github.com/endgameinc/dga_predict/compare/master...covert-labs:master).
+I decided to explore the last use case of how well auxiliary loss optimizations would improve DGA domain detections.  For this work I identified four DGA models and used these as baselines. Then I ran some experiments.  All code from these experiments is hosted [here](https://github.com/covert-labs/aloha_dga).  This code is based heavily off of Endgame's [dga_predict](https://github.com/endgameinc/dga_predict), but with many [modifications](https://github.com/endgameinc/dga_predict/compare/master...covert-labs:master).
 
 ### Data:
 
@@ -39,11 +39,11 @@ For this work, I used the same data sources selected by Endgame's dga_predict.
 
 ### Baseline Models: 
 
-I used 4 baseline binary models + 4 extensions of these that use Auxiliary Loss Optimization for Hypothesis Augmentation.
+I used 4 baseline binary models + 4 extensions of these model that use Auxiliary Loss Optimization for Hypothesis Augmentation.
 
 Baseline Models:
 
-* Bigram - Endgame Bigram model from [dga_predict]([dga_predict](https://github.com/endgameinc/dga_predict)).
+* Bigram - Endgame's Bigram model from [dga_predict]([dga_predict](https://github.com/endgameinc/dga_predict)).
 * LSTM - Endgame's LSTM model from [dga_predict]([dga_predict](https://github.com/endgameinc/dga_predict)).
 * CNN - CNN adapted from Keegan Hine's [snowman](https://github.com/keeganhines/snowman).
 * LSTM + CNN - CNN adapted from Keegan Hine's [snowman](https://github.com/keeganhines/snowman), combined with an LSTM as defined by [Deep Learning For Realtime Malware Detection (ShmooCon 2018)](https://www.youtube.com/watch?v=99hniQYB6VM)'s LSTM + CNN (see 13:17 for architecture) by Domenic Puzio and Kate Highnam.
@@ -54,9 +54,8 @@ ALOHA Extended Models (each simply use the 11 malware families as additional bin
 * ALOHA Bigram
 * ALOHA LSTM
 * ALOHA CNN+LSTM
-architecture, but I used the specific settings for each component from dga_predict and snowman.
 
-I trained each of these models using the default settings as provided by dga_predict (except, I added stratified sampling based on the full labels):
+I trained each of these models using the default settings as provided by dga_predict (except, I added stratified sampling based on the full labels: benign + malware families):
 
 * training splits: 76% training, 4% validation, %20 testing
 * all models were trained with a batch size of 128
@@ -128,10 +127,10 @@ These are some areas of future work I hope to have time to try out.
 
 * Add more DGA generators to the project, esp word-based / dictionary DGAs and see how the models react.  I have identified several (see "Word-based / Dictionary-based DGA Resources" from [here](http://www.covert.io/getting-started-with-dga-research/) for more info).
 * try incorporating other auxiliary targets like:
-    * Type of DGA (hex based, alphanumeric, custom alphanet, dictionary/word-based, etc)
+    * Type of DGA (hex based, alphanumeric, custom alphabet, dictionary/word-based, etc)
     * Classical DGA domain features like string entropy, count of longest consecutive consonant string, count of longest consecutive vowel string, etc.  I am curious if forcing the NN to learn these would improve its primary scoring mechanism.
     * Metadata from VT [domain report](https://developers.virustotal.com/reference#domain-report).
-    * Summary / stats from PDNS.
+    * Summary / stats from Passive DNS (PDNS).
     * Features from various aspects of the domain's whois record.
 
 
