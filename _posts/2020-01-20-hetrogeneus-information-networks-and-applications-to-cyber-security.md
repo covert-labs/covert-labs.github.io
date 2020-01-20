@@ -2,10 +2,10 @@
 layout: post
 title: "Hetrogeneus Information Networks + Cyber Security Use cases"
 description: ""
-modified: 2019-07-18
+modified: 2020-01-20
 
 image:
-  feature: grey-scale-dark.jpg
+  feature: hin/idetective-header-blurred.png
 comments: true
 share: true
 ---
@@ -14,9 +14,9 @@ This post explores Hetrogeneus Information Networks (HIN) and applications to Cy
 
 Over the past few months I have been researching Hetrogeneus Information Networks (HIN) and Cyber security use cases.  I first encountered HIN's after discovering this paper: ["Gotcha: Sly Malware!- Scorpion A Metagraph2vec Based Malware Detection System"](/research-papers/hetrogeneus-information-networks/Gotcha - Sly Malware!- Scorpion A Metagraph2vec Based Malware Detection System.pdf) through a Google Scholar Alert I had setup for ["Guilt by Association: Large Scale Malware Detection by Mining File-relation Graphs"](/research-papers/hetrogeneus-information-networks/Guilt by Association - Large Scale Malware Detection by Mining File-relation Graphs.pdf).  If you're interested in how I setup my Google Alerts to stay abreast of the latest security data science research, see this: [Security Data Science Learning Resources](https://medium.com/@jason_trost/security-data-science-learning-resources-8f7586995040).
 
-Hetrogeneus Information Networks are a relatively simple way of modelling a dataset as a graph made of nodes and edges where 1) all nodes and edges have defined types, and 2) types of nodes > 1 or types of edges > 1 (hence "Heterogeneus").  The set of node and edge types represents the schema of the network.  This differs from homogeneuos networks where the nodes and edges are all the same type (e.g. Facebook Social Network, Website hyperlinks).  HINs provide a very rich abstraction for modelling complex datasets.
+Hetrogeneus Information Networks are a relatively simple way of modelling one or more datasets as a graph consisting of nodes and edges where 1) all nodes and edges have defined types, and 2) types of nodes > 1 or types of edges > 1 (hence "Heterogeneus").  The set of node and edge types represents the schema of the network.  This differs from homogeneuos networks where the nodes and edges are all the same type (e.g. Facebook Social Network Graph, World Wide Web, etc.).  HINs provide a very rich abstraction for modelling complex datasets.
 
-Below is an example schema taken from the [HinDom paper](/research-papers/hetrogeneus-information-networks/HinDom- A Robust Malicious Domain Detection System based on Heterogeneous Information Network with Transductive Classification.pdf).
+Below, I will walk through important HIN concepts using the [HinDom paper](/research-papers/hetrogeneus-information-networks/HinDom- A Robust Malicious Domain Detection System based on Heterogeneous Information Network with Transductive Classification.pdf) as an example.  HinDom uses DNS relationship data from passive DNS, DNS query logs, and DNS response logs to build a malicious domain classifier using HIN.  They use Alexa Top 1K list, Malwaredomains.com, Malwaredomainlist.com, DGArchive, Google Safe Browsing, and VirusTotal for deriving labels.  Below is an example HIN schema taken from this paper.
 
 ![HinDom Schema](/images/hin/hindom-schema-2.png)
 
@@ -32,11 +32,15 @@ This schema represents three combined datasets (Passive DNS, DNS query logs, DNS
 * **IP-domain-IP** - matrix D denotes that IP address i and IP address j are once mapped to the same domain.
 
 
-Once the dataset is represented as a graph, it needs to be converted into feature vectors before machine learning models can be built.  A common technique for featurizing a HIN is by defining Meta-paths or Meta-graphs against the graph and then performing guided random walks against the defined meta-paths/graphs.  Meta-paths represent graph traversals through specific node and edge sequences.  Meta-paths are akin to feature engineering in classical machine learning as it is very important to select meta-paths that provide useful signals for whatever variable is being predicted.  These random walks against meta-paths produce a sequence of nodes, similar to sentences of tokens, which can then be fed into models like [Skipgram](https://arxiv.org/pdf/1301.3781.pdf) to create embeddings.  Once the nodes are represented as embeddings many different models (SVM, DNN, etc) can be used to solve many different types of problems (Simiarity Search, Classification, Clustering, Recommendation, etc).  Below are the metapaths used in the HinDom paper.
+Once the dataset is represented as a graph, feature vectors need to be extracted before machine learning models can be built.  A common technique for featurizing a HIN is by defining Meta-paths or Meta-graphs against the graph and then performing guided random walks against the defined meta-paths/graphs.  Meta-paths represent graph traversals through specific node and edge sequences.  Meta-paths are akin to feature engineering in classical machine learning as it is very important to select meta-paths that provide useful signals for whatever variable is being predicted.  As sen in many HIN papers, meta-paths/graphs are often evaluated individually or in combination to determine their influence on model performance.  These random walks against meta-paths produce a sequence of nodes, similar to sentences of tokens, which can then be fed into models like [Skipgram or Continuous Bag-of-Words (CBOW)](https://arxiv.org/pdf/1301.3781.pdf) to create embeddings.  Once the nodes are represented as embeddings many different models (SVM, DNN, etc) can be used to solve many different types of problems (Simiarity Search, Classification, Clustering, Recommendation, etc).  Below are the meta-paths used in the HinDom paper.
 
-![HinDom Metapaths](/images/hin/hindom-metapaths.png)
+![HinDom Meta-paths](/images/hin/hindom-metapaths.png)
 
-Below are some resources that I found useful for learning more about Heterogeneous Information Networks.
+Below is the HinDom Architecture to illustrate how all these concepts come together.
+
+![HinDom Architecture](/images/hin/hindom-arch.png) 
+
+Below are some resources that I found useful for learning more about Heterogeneous Information Networks as well as several security related papers that used HIN.
 
 ### Books:
 
@@ -81,11 +85,11 @@ Below are some resources that I found useful for learning more about Heterogeneo
 
 ### Code:
 
-* https://github.com/zhoushengisnoob/HINE - Heterogeneous Information Network Embedding: papers and code implementations.
-* https://github.com/hetio/hetnetpy - HIN library
-* https://github.com/hetio/hetmatpy - HIN library that represents as matrices.
-* https://github.com/stellargraph/stellargraph (see [stellargraph-metapath2vec.ipynb](https://github.com/stellargraph/stellargraph/blob/develop/demos/embeddings/stellargraph-metapath2vec.ipynb))
-* https://github.com/csiesheep/hin2vec
+* [https://github.com/zhoushengisnoob/HINE](https://github.com/zhoushengisnoob/HINE) - Heterogeneous Information Network Embedding: papers and code implementations.
+* [https://github.com/stellargraph/stellargraph](https://github.com/stellargraph/stellargraph) (see [stellargraph-metapath2vec.ipynb](https://github.com/stellargraph/stellargraph/blob/develop/demos/embeddings/stellargraph-metapath2vec.ipynb))
+* [https://github.com/hetio/hetnetpy](https://github.com/hetio/hetnetpy) - HIN library
+* [https://github.com/hetio/hetmatpy](https://github.com/hetio/hetmatpy) - HIN library that represents as matrices.
+* [https://github.com/csiesheep/hin2vec](https://github.com/csiesheep/hin2vec)
 
 ### Prominent Security Researchers using HIN:
 
