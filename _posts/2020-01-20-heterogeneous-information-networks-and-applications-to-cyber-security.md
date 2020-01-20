@@ -85,11 +85,11 @@ Below are some resources that I found useful for learning more about Heterogeneo
 
 ### Code:
 
-* [https://github.com/zhoushengisnoob/HINE](https://github.com/zhoushengisnoob/HINE) - Heterogeneous Information Network Embedding: papers and code implementations.
-* [https://github.com/stellargraph/stellargraph](https://github.com/stellargraph/stellargraph) (see [stellargraph-metapath2vec.ipynb](https://github.com/stellargraph/stellargraph/blob/develop/demos/embeddings/stellargraph-metapath2vec.ipynb))
-* [https://github.com/hetio/hetnetpy](https://github.com/hetio/hetnetpy) - HIN library
-* [https://github.com/hetio/hetmatpy](https://github.com/hetio/hetmatpy) - HIN library that represents as matrices.
-* [https://github.com/csiesheep/hin2vec](https://github.com/csiesheep/hin2vec)
+* [github.com/zhoushengisnoob/HINE](https://github.com/zhoushengisnoob/HINE) - Heterogeneous Information Network Embedding: papers and code implementations.
+* [github.com/stellargraph/stellargraph](https://github.com/stellargraph/stellargraph) (see [stellargraph-metapath2vec.ipynb](https://github.com/stellargraph/stellargraph/blob/develop/demos/embeddings/stellargraph-metapath2vec.ipynb))
+* [github.com/hetio/hetnetpy](https://github.com/hetio/hetnetpy) - HIN library
+* [github.com/hetio/hetmatpy](https://github.com/hetio/hetmatpy) - HIN library that represents as matrices.
+* [github.com/csiesheep/hin2vec](https://github.com/csiesheep/hin2vec)
 
 ### Prominent Security Researchers using HIN:
 
