@@ -12,7 +12,7 @@ share: true
 
 In this post, I share my experience in building and maintaining large collections of benign IOCs (whitelists) for Threat Intelligence and Machine Learning Research.
 
-Whitelisting is a useful concept in Threat Intelligence correlation since it can be very easy for benign observables to make their way into threat intelligence indicator feeds, esp. coming from open source providers or vendors that are not as careful as they should be.  If these threat intelligence feeds are used for blocking (e.g. in firewalls or WAF devices) or alerting (e.g. log correlation in SIEM or IDS), the cost of benign entries making their way into a security control will be very high (wasted analyst time for triaging false positive alerts or loss of business productivity for blocked legitimate websites).  Whitelists are generally used to filter out observables from threat intelligence feeds that almost certainly would be marked as a false positive if they were intersected against event logs (e.g. bluecoat proxy logs, firewall logs, etc) and used for alerting. 
+Whitelisting is a useful concept in Threat Intelligence correlation since it can be very easy for benign observables to make their way into [threat intelligence indicator feeds](/threat-intelligence/), esp. coming from open source providers or vendors that are not as careful as they should be.  If these threat intelligence feeds are used for blocking (e.g. in firewalls or WAF devices) or alerting (e.g. log correlation in SIEM or IDS), the cost of benign entries making their way into a security control will be very high (wasted analyst time for triaging false positive alerts or loss of business productivity for blocked legitimate websites).  Whitelists are generally used to filter out observables from threat intelligence feeds that almost certainly would be marked as a false positive if they were intersected against event logs (e.g. bluecoat proxy logs, firewall logs, etc) and used for alerting. 
 
 Whitelists are generally used for:
 
@@ -84,16 +84,14 @@ Benign Outbound Observables typically show up frequently in threat intelligence 
 
 * **Popular Domains** - Popular domains can wind up on threat intelligence feeds, especially those derived from malware sandboxing since often times malware uses benign domains as connectivity checks and some malware, like those conducting click fraud act more like web crawlers, visiting many different benign sites.  These same popular domains show up very often in most corporate networks and are almost always benign in nature (Note: they can be compromised and used for hosting malicious content so great care needs to be taken here).
     * Below are several data sources for popular domain names.  Each are slightly different in how they measure popularity (by volume of Web visitors, frequency of occurrence in Web Crawling data, by volume of DNS queries based, or a combination).  These lists should not be used as-is for whitelisting; they need to be filtered/refined.  See section on "Building / Maintaining Whitelist Data" below for more details on recommendations for refinement.  
-        * Amazon Alexa top 1 Million - http://s3.amazonaws.com/alexa-static/top-1m.csv.zip
-        * Quantcast Top 1 Million - http://ak.quantcast.com/quantcast-top-sites.zip
-        * Majestic Million Domains - https://blog.majestic.com/development/majestic-million-csv-daily/
-        * Cisco Umbrella Top 1 Million http://s3-us-west-1.amazonaws.com/umbrella-static/index.html
-        * Moz's list of the most popular 500 websites on the internet https://moz.com/top500 
-        * Tranco: A Research-Oriented Top Sites Ranking Hardened Against Manipulation https://tranco-list.eu/
-    * For more details on these popular domain lists, I recommend checking out these papers:
-        * A Long Way to the Top: Significance, Structure, and Stability of Internet Top Lists https://arxiv.org/pdf/1805.11506.pdf
-        * Rigging Research Results by Manipulating Top Websites Rankings https://pdfs.semanticscholar.org/0047/4a718cac85d240f605acdffe396046be0ac0.pdf
-        * TRANCO: A Research-Oriented Top Sites Ranking Hardened Against Manipulation https://tranco-list.eu/assets/tranco-ndss19.pdf
+        * [Amazon Alexa top 1 Million](http://s3.amazonaws.com/alexa-static/top-1m.csv.zip)
+        * [Cisco Umbrella Top 1 Million](http://s3-us-west-1.amazonaws.com/umbrella-static/index.html)
+        * [Domcop Top 10m Domains](https://www.domcop.com/top-10-million-websites) ([data](https://www.domcop.com/files/top/top10milliondomains.csv.zip)) - The top 10 million websites taken from the Open PageRank Initiative.
+        * [Majestic Million Domains](https://blog.majestic.com/development/majestic-million-csv-daily/)
+        * [Moz's list of the most popular 500 websites on the internet](https://moz.com/top500)
+        * [Quantcast Top 1 Million](http://ak.quantcast.com/quantcast-top-sites.zip)
+        * [Tranco: A Research-Oriented Top Sites Ranking Hardened Against Manipulation](https://tranco-list.eu/)
+    * For more details on these popular domain lists, checkout this [post](/three-short-links-on-popular-domain-lists-for-threat-intelligence/):
 * **Popular IP Addresses** - Popular IPs are very similar to popular domains.  They show up everywhere and when they wind up on threat intelligence feeds they cause a lot of false positives.  Popular IP lists can be generated from resolving the Popular domain lists.  These lists should not be used as-is for whitelisting; they need to be filtered/refined.  See section on "Building / Maintaining Whitelist Data" below for more details on recommendations for refinement.  
 * **Free email domains** - free email domains occasionally show up in threat intelligence feeds by accident so it is good to maintain a good list of these to prevent false positives.  Below is one source decent source from hubspot.
     * https://knowledge.hubspot.com/articles/kcs_article/forms/what-domains-are-blocked-when-using-the-forms-email-domains-to-block-feature 
