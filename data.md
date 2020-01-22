@@ -11,13 +11,20 @@ share: true
 
 ## Data
 
-Collection of Security and Network Data Resources.  [Mike Sconzo's](https://twitter.com/sooshie) [secrepo.com](http://www.secrepo.com/) is more comprehensive and should be checked as well.
+Collection of Security and Network Data Resources.  See the [Threat Intelligence](/threat-intelligence/) page for a massive list of threat intelligence feeds.
 
-See the [Threat Intelligence](/threat-intelligence/) page for a massive list of threat intelligence feeds.
+### Popular Websites / Domains Data
 
 * [Alexa Top 1m Domains](http://s3.amazonaws.com/alexa-static/top-1m.csv.zip)
-* [betterdefaultpasslist](https://github.com/govolution/betterdefaultpasslist) - "list includes default credentials from various manufacturers for their products like NAS, ERP, ICS etc., that are used for standard products like mssql, vnc, oracle and so on"
 * [Cisco Umbrella Top 1 Million Domains](https://blog.opendns.com/2016/12/14/cisco-umbrella-1-million/) ([data](http://s3-us-west-1.amazonaws.com/umbrella-static/top-1m.csv.zip))
+* [Domcop Top 10m Domains](https://www.domcop.com/top-10-million-websites) ([data](https://www.domcop.com/files/top/top10milliondomains.csv.zip)) - The top 10 million websites taken from the Open PageRank Initiative.
+* [Majestic Million](https://majestic.com/reports/majestic-million) ([data](http://downloads.majestic.com/majestic_million.csv)) - Top domains list based on web crawling data.
+* [Quantcast top Million Domains](https://ak.quantcast.com/quantcast-top-sites.zip)
+* [Tranco: A Research-Oriented Top Sites Ranking Hardened Against Manipulation](https://tranco-list.eu/) ([data](https://tranco-list.eu/top-1m.csv.zip)) - another top domains list derived from Alexa, Umbrella, Majestic, and Quantcast, but combined using the Dowdall rule.
+
+### Other Data
+
+* [betterdefaultpasslist](https://github.com/govolution/betterdefaultpasslist) - "list includes default credentials from various manufacturers for their products like NAS, ERP, ICS etc., that are used for standard products like mssql, vnc, oracle and so on"
 * [Common Crawl](http://commoncrawl.org/) - TBs of publicly available web crawl data hosted in Amazon S3.
 * [Covert.io Threat Intelligence List](/threat-intelligence/)
 * [Dark Web Market Crawls with onionscan](https://polecat.mascherari.press/onionscan/dark-web-data-dumps)
@@ -27,22 +34,18 @@ See the [Threat Intelligence](/threat-intelligence/) page for a massive list of 
 * [Data Driven Security Dataset Collection](http://datadrivensecurity.info/blog/pages/dds-dataset-collection.html)
 * [DGArchive](https://dgarchive.caad.fkie.fraunhofer.de/site/) - DGA Domains Database.
 * [Domains-index.com](https://domains-index.com/) - ccTLD Zone Files / Domain Name Lists for sale.  See [Free Domain Lists](https://domains-index.com/downloads/category/free/)
-* [Domcop Top 10m Domains](https://www.domcop.com/top-10-million-websites) ([data](https://www.domcop.com/files/top/top10milliondomains.csv.zip)) - The top 10 million websites taken from the Open PageRank Initiative.
 * [heralding honeypot log sample (3077 events)](/data/heralding_activity.log.gz)
 * [Malicious URLs Data Sets](http://sysnet.ucsd.edu/projects/url/)
-* [Majestic Million](https://majestic.com/reports/majestic-million) ([data](http://downloads.majestic.com/majestic_million.csv)) - Top domains list based on web crawling data.
 * [Malware Training Sets: A machine learning dataset for everyone](http://marcoramilli.blogspot.cz/2016/12/malware-training-sets-machine-learning.html) ([data](https://github.com/marcoramilli/MalwareTrainingSets))
 * [Multi-Source Cyber-Security Events](http://csr.lanl.gov/data/cyber1/)
 * [NSL-KDD Data Sets](https://github.com/defcom17/NSL_KDD)
 * [Onionscan data sample](https://github.com/automatingosint/osint_public/tree/master/onionrunner)
 * [Open Data Sets](http://csr.lanl.gov/data/)
 * [PublicDB.host](https://publicdb.host/index.php) ([data](https://cdn.publicdb.host/)) - collection of dumped databases from many major breaches.
-* [Quantcast top Million Domains](https://ak.quantcast.com/quantcast-top-sites.zip)
 * [Scans.io](https://scans.io/) - publicly available Internet scale port scan and DNS data.
 * [SecRepo.com - Samples of Security Related Data](http://www.secrepo.com/)
 * [Stratosphere IPS Data Sets](https://stratosphereips.org/category/dataset.html)
 * [The ADFA Intrusion Detection Data Sets](https://www.unsw.adfa.edu.au/australian-centre-for-cyber-security/cybersecurity/ADFA-IDS-Datasets/)
-* [Tranco: A Research-Oriented Top Sites Ranking Hardened Against Manipulation](https://tranco-list.eu/) ([data](https://tranco-list.eu/top-1m.csv.zip)) - another top domains list derived from Alexa, Umbrella, Majestic, and Quantcast, but combined using the Dowdall rule.
 * [VERIS Community Database](https://github.com/vz-risk/VCDB)
 * [ViewDns.info](http://viewdns.info/data/) - ccTLD Zone Files / Domain Name Lists for sale.
 * [Virusshare](https://virusshare.com/)
