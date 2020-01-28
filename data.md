@@ -16,6 +16,7 @@ Collection of Security and Network Data Resources.  See the [Threat Intelligence
 ### Popular Websites / Domains Data
 
 * [Alexa Top 1m Domains](http://s3.amazonaws.com/alexa-static/top-1m.csv.zip)
+* [Large historic mirror of the Alexa Top 1m Domains](https://web.archive.org/web/*/http://s3.amazonaws.com/alexa-static/top-1m.csv.zip)
 * [Cisco Umbrella Top 1 Million Domains](https://blog.opendns.com/2016/12/14/cisco-umbrella-1-million/) ([data](http://s3-us-west-1.amazonaws.com/umbrella-static/top-1m.csv.zip))
 * [Domcop Top 10m Domains](https://www.domcop.com/top-10-million-websites) ([data](https://www.domcop.com/files/top/top10milliondomains.csv.zip)) - The top 10 million websites taken from the Open PageRank Initiative.
 * [Majestic Million](https://majestic.com/reports/majestic-million) ([data](http://downloads.majestic.com/majestic_million.csv)) - Top domains list based on web crawling data.
