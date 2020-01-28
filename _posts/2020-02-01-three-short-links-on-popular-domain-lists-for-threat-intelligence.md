@@ -19,4 +19,4 @@ A short listing of research papers I've read that analyze popular domain lists. 
 --Jason
 <br />[@jason_trost](https://twitter.com/#!/jason_trost)
 
-The "short links" format was inspired by [Oreilly's Four Short Links](https://www.oreilly.com/feed/four-short-links) series.
+The "short links" format was inspired by [O'Reilly's Four Short Links](https://www.oreilly.com/feed/four-short-links) series.
