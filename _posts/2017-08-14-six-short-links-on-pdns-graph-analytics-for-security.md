@@ -50,4 +50,4 @@ In Proceedings of the 11th ACM on Asia Conference on Computer and Communications
 <br />[@jason_trost](https://twitter.com/#!/jason_trost)
 
 
-*The "short links" format was inspired by [Oreilly's Four Short Links](https://www.oreilly.com/feed/four-short-links) series.*
+*The "short links" format was inspired by [O'Reilly's Four Short Links](https://www.oreilly.com/feed/four-short-links) series.*

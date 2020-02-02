@@ -3,7 +3,7 @@ layout: post
 title: "Heterogeneous Information Networks + Cyber Security Use cases"
 description: ""
 modified: 2020-01-20
-
+tags: [security, research, machine learning, graph analytics, heterogeneous information networks, HIN]
 image:
   feature: hin/idetective-header-blurred.png
 comments: true
@@ -14,7 +14,7 @@ This post explores Heterogeneous Information Networks (HIN) and applications to 
 
 Over the past few months I have been researching Heterogeneous Information Networks (HIN) and Cyber security use cases.  I first encountered HIN's after discovering this paper: ["Gotcha: Sly Malware!- Scorpion A Metagraph2vec Based Malware Detection System"](/research-papers/heterogeneous-information-networks/Gotcha - Sly Malware!- Scorpion A Metagraph2vec Based Malware Detection System.pdf) through a Google Scholar Alert I had setup for ["Guilt by Association: Large Scale Malware Detection by Mining File-relation Graphs"](/research-papers/heterogeneous-information-networks/Guilt by Association - Large Scale Malware Detection by Mining File-relation Graphs.pdf).  If you're interested in how I setup my Google Alerts to stay abreast of the latest security data science research, see this: [Security Data Science Learning Resources](https://medium.com/@jason_trost/security-data-science-learning-resources-8f7586995040).
 
-Heterogeneous Information Networks are a relatively simple way of modelling one or more datasets as a graph consisting of nodes and edges where 1) all nodes and edges have defined types, and 2) types of nodes > 1 or types of edges > 1 (hence "Heterogeneus").  The set of node and edge types represents the schema of the network.  This differs from homogeneous networks where the nodes and edges are all the same type (e.g. Facebook Social Network Graph, World Wide Web, etc.).  HINs provide a very rich abstraction for modelling complex datasets.
+Heterogeneous Information Networks are a relatively simple way of modelling one or more datasets as a graph consisting of nodes and edges where 1) all nodes and edges have defined types, and 2) types of nodes > 1 or types of edges > 1 (hence "Heterogeneous").  The set of node and edge types represents the schema of the network.  This differs from homogeneous networks where the nodes and edges are all the same type (e.g. Facebook Social Network Graph, World Wide Web, etc.).  HINs provide a very rich abstraction for modelling complex datasets.
 
 Below, I will walk through important HIN concepts using the [HinDom paper](/research-papers/heterogeneous-information-networks/HinDom- A Robust Malicious Domain Detection System based on Heterogeneous Information Network with Transductive Classification.pdf) as an example.  HinDom uses DNS relationship data from passive DNS, DNS query logs, and DNS response logs to build a malicious domain classifier using HIN.  They use Alexa Top 1K list, Malwaredomains.com, Malwaredomainlist.com, DGArchive, Google Safe Browsing, and VirusTotal for deriving labels.  Below is an example HIN schema taken from this paper.
 
