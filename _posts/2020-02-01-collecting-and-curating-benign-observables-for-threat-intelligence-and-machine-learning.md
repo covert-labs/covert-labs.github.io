@@ -5,7 +5,7 @@ description: ""
 modified: 2020-02-01
 tags: [security, research, machine learning, DNS, whitelists, training data]
 image:
-  feature: grey-scale-dark.jpg
+  feature: whitelists/whitelists-header-blurred.png
 comments: true
 share: true
 ---
