@@ -2,7 +2,7 @@
 layout: post
 title: Getting Started with DGA Domain Detection Research
 description: "Resources for getting started with research on Domain Generation Algorithm (DGA) Domain Detection"
-modified: 2019-07-16
+modified: 2020-03-22
 tags: [security, research, machine learning, deep learning, DGA]
 image:
   feature: grey-scale-dark.jpg
@@ -52,6 +52,24 @@ This section lists some domain lists that may be useful for creating "labelled" 
 * [The Majestic Million](http://downloads.majestic.com/majestic_million.csv)
 * [DomCop Top 1M](https://www.domcop.com/files/top/top10milliondomains.csv.zip)
 * [Whitelisted Domains](https://raw.githubusercontent.com/maravento/blackweb/master/bwupdate/lst/whiteurls.txt) from [maravento/blackweb](https://github.com/maravento/blackweb)
+
+#### Update (2020-03-22) - More Heuristics for Benign training set curation:
+
+Excerpt from [Inline Detection of DGA Domains Using Side Information (page 12)](https://arxiv.org/pdf/2003.05703.pdf)
+
+> The benign samples are collected based on a predefined set of heuristics as listed below:
+> * Domain name should have valid DNS characters only (digits, letters, dot and hyphen)
+> * Domain has to be resolved at least once for every day between June 01, 2019 and July 31, 2019.
+> * Domain name should have a valid public suffix
+> * Characters in the domain name are not all digits (after removing '.' and '-')
+> * Domain should have at most four labels (Labels are sequence of characters separated by a dot)
+> * Length of the domain name is at most 255 characters
+> * Longest label is between 7 and 64 characters
+> * Longest label is more than twice the length of the TLD
+> * Longest label is more than 70% of the combined length of all labels
+> * Excludes IDN (International Distribution Network) domains (such as domains starting with xn--)
+> * Domain must not exist in DGArchive
+
 
 ### Utilities:
 
