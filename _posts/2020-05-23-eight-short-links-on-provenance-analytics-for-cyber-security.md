@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Eight Provenance Analytics for Cyber Security"
+title: "Eight Short Links on Provenance Analytics for Cyber Security"
 description: ""
 modified: 2020-02-01
 tags: [security, research, machine learning, provenance analytics, alert triage, incident response, graph analytics]
