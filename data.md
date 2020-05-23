@@ -22,6 +22,7 @@ Collection of Security and Network Data Resources.  See the [Threat Intelligence
 * [Majestic Million](https://majestic.com/reports/majestic-million) ([data](http://downloads.majestic.com/majestic_million.csv)) - Top domains list based on web crawling data.
 * [Quantcast top Million Domains](https://ak.quantcast.com/quantcast-top-sites.zip)
 * [Tranco: A Research-Oriented Top Sites Ranking Hardened Against Manipulation](https://tranco-list.eu/) ([data](https://tranco-list.eu/top-1m.csv.zip)) - another top domains list derived from Alexa, Umbrella, Majestic, and Quantcast, but combined using the Dowdall rule.
+* [OpenIntel Historic active DNS data](https://data.openintel.nl/data/) - DNS resolution data for Alexa top1m, Umbrella top1m, and open TLDs (.se, .nu, .ee ccTLDs and all US Federal domain names from the .gov and .fed.us).
 
 ### Other Data
 
