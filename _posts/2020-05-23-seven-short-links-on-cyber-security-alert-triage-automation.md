@@ -3,7 +3,7 @@ layout: post
 title: "Seven Short Links on Cyber Security Alert Triage Automation"
 description: ""
 modified: 2020-02-01
-tags: [security, research, machine learning, alert, cyber alert, triage automation, alert triage]
+tags: [security, research, machine learning, alert, cyber alert, triage automation, alert triage, graph analytics]
 image:
   feature: NODOZE-screenshot.png
 comments: true
