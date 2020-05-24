@@ -12,6 +12,9 @@ share: true
 
 A short listing of research papers I've read that analyze popular domain lists.  These papers analyze Alexa, Quantcast, Cisco Umbrella, and Majestic top websites/domains.
 
+<img src="/images/popular-lists-overlap.png" text="Average daily intersection of the top domain lists (from TRANCO paper)"/>
+
+
 * [A Long Way to the Top: Significance, Structure, and Stability of Internet Top Lists](https://arxiv.org/pdf/1805.11506.pdf)
 * [Rigging Research Results by Manipulating Top Websites Rankings](https://pdfs.semanticscholar.org/0047/4a718cac85d240f605acdffe396046be0ac0.pdf)
 * [TRANCO: A Research-Oriented Top Sites Ranking Hardened Against Manipulation](https://tranco-list.eu/assets/tranco-ndss19.pdf)
