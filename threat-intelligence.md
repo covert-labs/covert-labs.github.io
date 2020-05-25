@@ -169,6 +169,7 @@ These URLs are data feeds of various types from scanning IPs from honeypots to C
 * [https://techhelplist.com/maltlqr/reports/dyreza.txt](https://techhelplist.com/maltlqr/reports/dyreza.txt)
 * [https://techhelplist.com/pastes](https://techhelplist.com/pastes)
 * [https://techhelplist.com/spam-list](https://techhelplist.com/spam-list)
+* [https://threatfeeds.io/](https://threatfeeds.io/)
 * [https://torstatus.blutmagie.de/ip_list_all.php/Tor_ip_list_ALL.csv](https://torstatus.blutmagie.de/ip_list_all.php/Tor_ip_list_ALL.csv)
 * [https://urlhaus.abuse.ch/downloads/csv/](https://urlhaus.abuse.ch/downloads/csv/)
 * [https://www.badips.com/get/list/any/2?age=7d](https://www.badips.com/get/list/any/2?age=7d)
