@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "All your SPF are belong to us: Exploring trust relationships through gloabl scale SPF Mining"
+title: "All your SPF are belong to us: Exploring trust relationships through global scale SPF Mining"
 description: ""
 modified: 2020-07-06
 tags: [security, research, dns, analytics, email, data science]
@@ -14,17 +14,17 @@ In this post we explore a large collection of Sender Policy Framework (SPF) reco
 
 Here is the methodology I devised for this (very similar to the previous post, but with [new](https://github.com/covert-labs/mx-intel/blob/master/parallel_dig.sh) [custom](https://github.com/covert-labs/mx-intel/blob/master/spf_crawler.py) [built](https://github.com/covert-labs/mx-intel/blob/master/spf_results_parser.py) [tools](https://github.com/covert-labs/mx-intel/blob/master/SPF-Parse-Enrich.ipynb)):
 
-1. Collect a large sample of SPF records via DNS TXT lookups of popular domain names.
+1. Collect a large sample of SPF records via DNS TXT lookups of popular domain names (and recursively resolving SPF "include" domains).
 2. Enrich SPF records with IP intelligence and useful metadata (including [email security provider mappings](https://github.com/covert-labs/mx-intel/blob/master/email_security_providers.py))
 3. Analyze the enriched results.
 
-### Intro to Sender Policy Framework (SPF)
+## Intro to Sender Policy Framework (SPF)
 
-The Sender Policy Framework (SPF) enables domain name administrators to authorize hosts to use their domain names when sending email (i.e. in the "MAIL FROM" or "HELO" identities).  SPF records are published using DNS TXT records.  They specify which hosts are allowed to use these domains.  SPF compliant mail receivers use the published SPF records to test the authorization of sending Mail Transfer Agents (MTAs).  Below is an example SPF record for Florida State University (go noles!).
+The Sender Policy Framework (SPF) enables domain name administrators to authorize hosts to use their domain names when sending email (i.e. in the "MAIL FROM" or "HELO" identities in SMTP).  SPF records are published using DNS TXT records.  SPF compliant mail receivers use the published SPF records to test the authorization of sending Mail Transfer Agents (MTAs).  SPF can be used to build complex policies around who can send email on whose behalf.  Below is an example SPF record for Florida State University.
 
 <script src="https://gist.github.com/jatrost/544dfbc979332f6948a2bca065830dc5.js"></script>
 
-According to this SPF record these IP addresses are allowed to send email purporting to be from fsu.edu: 146.201.58.212, 146.201.58.213, 146.201.107.145, 146.201.107.249, 192.12.121.23, and 199.188.157.80.  Also, the SPF policies of spf.protection.outlook.com, \_spf.qualtrics.com, spf.blackboardconnect.com, servers.mcsv.net, and \_spf.mlsend.com should be retrieved and their policies applied as well.  Below are the SPF records for each of these domains.  As you can see they include more and more IPs/CIDRs as well as additional SPF includes.  
+According to this SPF record 146.201.58.212, 146.201.58.213, 146.201.107.145, 146.201.107.249, 192.12.121.23, and 199.188.157.80 are allowed to send email purporting to be from fsu.edu.  Also, the SPF records from spf.protection.outlook.com, \_spf.qualtrics.com, spf.blackboardconnect.com, servers.mcsv.net, and \_spf.mlsend.com should be retrieved and their policies applied as well.  Below are the SPF records for each of these domains.  As you can see they include more and more IPs/CIDRs as well as additional SPF includes.  
 
 <script src="https://gist.github.com/jatrost/e342a1b77bde98d231cc4ef3f30e71b7.js"></script>
 
@@ -35,11 +35,11 @@ Below are some useful resources for understanding SPF:
 * [RFC7208: Sender Policy Framework (SPF) for Authorizing Use of Domains in Email](https://tools.ietf.org/html/rfc7208)
 * [SPF Syntax Table](https://dmarcian.com/spf-syntax-table/) - really useful guide for understanding SPF "mechanisms".
 
-### Step One: Collection
+## Step One: Collection
 
-For step one, I built a very crude [SPF crawler](https://github.com/covert-labs/mx-intel/blob/master/spf_crawler.py) that uses dig (optionally adnshost) to perform DNS TXT requests, parse out SPF records found, and then recursively follow the trail of SPF include records and perform TXT lookups against the included domains.
+For step one, I built a very ~~crude~~ useful [SPF crawler](https://github.com/covert-labs/mx-intel/blob/master/spf_crawler.py) that uses dig (optionally adnshost) to perform DNS TXT requests, parse out SPF records found, and then recursively follow the trail of SPF include records and perform TXT lookups against the included domains.
 
-In order to seed the SPF crawler, I used the same domains I used in my [previous blog post on mining MX records](http://www.covert.io/mining-mx-records-for-fun-and-profit/). I downloaded the [Alexa top 1M domains](http://s3.amazonaws.com/alexa-static/top-1m.csv.zip), [Quantcast top 1m domains (from WaybackMachine)](https://web.archive.org/web/*/https://ak.quantcast.com/quantcast-top-sites.zip), [Domcop Top 10m domains](https://www.domcop.com/top-10-million-domains), [Majestic Million Domains](https://majestic.com/reports/majestic-million) and [Cisco Umbrella top 1m domains](https://umbrella.cisco.com/blog/cisco-umbrella-1-million).  I identified the registered domain using [tldextract](https://pypi.org/project/tldextract/) for each of these and then combined them into a [single de-duplicated list](https://mx-intel-public.s3.amazonaws.com/all-registered-domains.txt.gz).  This resulted in \~8.3M unique domain names.
+In order to seed the SPF crawler, I used the same domains I used in my [previous blog post on mining MX records](http://www.covert.io/mining-mx-records-for-fun-and-profit/).  I downloaded the [Alexa top 1M domains](http://s3.amazonaws.com/alexa-static/top-1m.csv.zip), [Quantcast top 1m domains (from WaybackMachine)](https://web.archive.org/web/*/https://ak.quantcast.com/quantcast-top-sites.zip), [Domcop Top 10m domains](https://www.domcop.com/top-10-million-domains), [Majestic Million Domains](https://majestic.com/reports/majestic-million) and [Cisco Umbrella top 1m domains](https://umbrella.cisco.com/blog/cisco-umbrella-1-million).  I identified the registered domain using [tldextract](https://pypi.org/project/tldextract/) for each of these and then combined them into a [single de-duplicated list](https://mx-intel-public.s3.amazonaws.com/all-registered-domains.txt.gz).  This resulted in \~8.3M unique domain names.
 
 These domains were fed into my SPF crawler and then the results were collected, parsed, and then assembled.  I ended up backing the SPF crawler with "dig" instead of "adnshost" this time since I found dig was more reliable, completing 23% more DNS requests in an experiment against the Fortune 1000 domains.  Dig is single threaded, but I easily parallelized it using splits files and xargs and its performance ended up being good enough.  See [parallel_dig.sh](https://github.com/covert-labs/mx-intel/blob/master/parallel_dig.sh) for more details.
 
@@ -51,7 +51,7 @@ Below is the same information, visualized as a network (and enriched with ASN in
 
 <a href="/images/spf/fsu-networkx.png"><img src="/images/spf/fsu-networkx.png" width="600px"></a>
 
-### Step Two: Enrichment
+## Step Two: Enrichment
 
 For this step, I reused [a lot of the code](https://github.com/covert-labs/mx-intel) from my previous blog post on [Mining MX records](http://www.covert.io/mining-mx-records-for-fun-and-profit/) and performed the following enrichments:
 
@@ -61,9 +61,9 @@ For this step, I reused [a lot of the code](https://github.com/covert-labs/mx-in
 4. Alexa Ranking
 5. [Email Security Provider mapping](https://github.com/covert-labs/mx-intel/blob/master/email_security_providers.py)
 
-[netaddr](https://pypi.org/project/netaddr/) and [tldextract](https://pypi.org/project/tldextract/) were useful during this stage.
+[netaddr](https://pypi.org/project/netaddr/), [tldextract](https://pypi.org/project/tldextract/), and [cidr-trie](https://github.com/Figglewatts/cidr-trie) were useful during this stage.
 
-### Step Three: Analysis
+## Step Three: Analysis
 
 Through this analysis, I hoped to answer the following questions:
 
@@ -71,16 +71,24 @@ Through this analysis, I hoped to answer the following questions:
 * Could I find any blatantly misconfigured SPF records? ... YES
 * What does SPF data show about email security providers? ... A lot that MX doesn't
 * What are the most "included" SPF includes?  ... Not many surprises here
-* Does SPF augment the MX record mining (give more coverage? reveal things previously hidden? or 100% redundant?) .. YES!
-* Trusted IP space from cloud providers that may be reusable? 
+* Does SPF augment the MX record mining (give more coverage? reveal things previously hidden? or 100% redundant?) ... YES!
+* Are domains trusting IP space from cloud providers that may be re-usable (i.e. AWS EC2)? ... YES!
 
-Below are some outputs from this project's Jupyter notebook
+Below are some outputs and commentary from this project's Jupyter notebook that answer the questions above.
+
+These [networkx](https://networkx.github.io/) visualizations are a bit of a mess, but they should get the point across of how interconnected the SPF trust relationships are.
 
 ### Fortune 100 SPF Trusted Networks Graph
 <a href="/images/spf/fortune-100-networkx.png"><img src="/images/spf/fortune-100-networkx.png" width="600px"></a>
 
 ### Alexa 100 SPF Trusted Networks Graph
 <a href="/images/spf/alexa-100-networkx.png"><img src="/images/spf/alexa-100-networkx.png" width="600px"></a>
+
+## Heatmaps
+
+As you can see from the next several heatmaps, as we go beyond the Alexa top 1,000 domains the number of networks trusted drastically increases, and as we hit the Alexa 1m, the entire Internet is trusted.  
+
+These heatmaps were generated with the awesome [ipv4-heatmap](https://github.com/measurement-factory/ipv4-heatmap) tool provided by the [Measurement Factory](http://www.measurement-factory.com/).  The code to automate this can be found in my Jupyter Notebook [here](https://github.com/covert-labs/mx-intel/blob/master/SPF-Parse-Enrich.ipynb).
 
 ### Fortune 1,000 SPF Trusted Networks Heatmap
 <img src="/images/spf/fortune-1000-heatmap.png" width="600px">
@@ -89,9 +97,6 @@ Below are some outputs from this project's Jupyter notebook
 <img src="/images/spf/alexa-1000-heatmap.png" width="600px">
 
 ### Alexa 10,000 SPF Trusted Networks Heatmap
-
-As you can see from the next few heatmaps, as we go beyond the Alexa top 1,000 the number of networks trusted drastically increases, and as we hit the Alexa 1m, the entire Internet is trusted.  These heatmaps were generated with the awesome [ipv4-heatmap](https://github.com/measurement-factory/ipv4-heatmap) tool provided by the [Measurement Factory](http://www.measurement-factory.com/).  The code to automate this can be found in my Jupyter Notebook [here](https://github.com/covert-labs/mx-intel/blob/master/SPF-Parse-Enrich.ipynb).
-
 <img src="/images/spf/alexa-10000-heatmap.png" width="600px">
 
 ### Alexa 100,000 SPF Trusted Networks Heatmap
@@ -111,7 +116,7 @@ As you can see from this list, there are quite a few domains that trust very lar
 
 This domain trusts half of the Internet -  salaam[.]af: 175.106.32.0/1
 
-And these five domains trust one 1/4 of the Internet.  cfe[.]fr appears to have fixed this apparent misconfiguration now.  As their TXT record has changed.
+And these five domains trust 1/4 of the Internet.  cfe[.]fr appears to have fixed this apparent misconfiguration now.  As their TXT record has changed.
 
 * creativecircle[.]com: 64.4.22.64/2
 * gevestor[.]de: 91.241.72.0/2
@@ -124,7 +129,7 @@ And these five domains trust one 1/4 of the Internet.  cfe[.]fr appears to have 
 ### Top SPF Includes from all top domain lists (via SPF)
 <script src="https://gist.github.com/jatrost/4d60851dcab2928e5e82e68714187237.js"></script>
 
-Using all the popular domain names, here is a summary of the top 10 results.  
+Using all the popular domain names, here is a summary of the top 10 SPF includes. 
 
 Major Cloud Email Providers:
 * Microsoft: spf.protection.outlook.com 
@@ -141,7 +146,7 @@ Commercial Email Marketing companies
 * Sendgrid: sendgrid.net
 
 Email Security company: 
-* MailChannels: mailchannels.net
+* MailChannels: mailchannels.net (more on this later)
 
 ### Top SPF Includes from Fortune 1000 (via SPF)
 <script src="https://gist.github.com/jatrost/6944e81b2759125be864dde4f3db4ced.js"></script>
@@ -151,15 +156,14 @@ Email Security company:
 
 ## Email Security Providers
 
-If you read my previous blog post on [Mining DNS MX Records for Fun and Profit](http://www.covert.io/mining-mx-records-for-fun-and-profit/), then you might notice that these top lists look significantly different than the top email providers as identified from MX records.  The top 5 providers identified in the SPF data are MailChannels, Mimecast, Proofpoint, Solarwinds, and Barracuda.  In the MX post, the top 5 were Proofpoint, Mimecast, Dteque, Barracuda, and Solarwinds AND MailChannels was #48 on that list.  These top lists are using all the popular domains data which is likely not an accurate reflection of the actual email security market.  When reviewing the Fortune 1000 top Email Security providers the story is not as surprising as the top 4 from the Fortune 1000 Email security providers were nearly identical across SPF and MX records with just the order being different.  I suspect that MailChannels is the default setting on newly registered domains OR for domains that are parked, but I haven't spent the time to prove/disprove this.
+If you read my previous blog post on [Mining DNS MX Records for Fun and Profit](http://www.covert.io/mining-mx-records-for-fun-and-profit/), then you might notice that these top lists look significantly different than the top email providers as identified from MX records.  The top 5 providers identified in the SPF data are MailChannels, Mimecast, Proofpoint, Solarwinds, and Barracuda.  In the MX post, the top 5 were Proofpoint, Mimecast, Deteque, Barracuda, and Solarwinds, AND MailChannels was #48 on that list.  These top lists are using all the popular domains data which is likely not an accurate reflection of the actual email security market.  When reviewing the Fortune 1000 top Email Security providers the story is not as surprising as the top 4 from the Fortune 1000 Email security providers were nearly identical across SPF and MX records with just the order being different.  I suspect that MailChannels shows up as popular in SPF because either it is the default setting on newly registered domains OR it is the default setting for domains that are parked with certain hosting providers, but I haven't spent the time to prove/disprove this.
 
-One other interesting aspect with SPF is it (potentially) reveals relationships with multiple email security providers.  See the "Fortune 100 Email Security Providers Listing (via SPF)" and "Domains with 4 or more Email Security Providers (via SPF)" gists below.  In the Fortune 100 list, there are 3 domains using more than one provider.  If you look across all the top domains data you can see there are many.  For anyone who has worked in the cyber security department at a large company before, this is not surprising, but it was cool to be able to see this in the data.
+One other interesting aspect with SPF is it (potentially) reveals relationships with multiple email security providers.  See the "Fortune 100 Email Security Providers Listing (via SPF)" and "Domains with 4 or more Email Security Providers (via SPF)" gists below.  In the Fortune 100 list, there are 3 domains with SPF relationships with more than one provider.  If you look across all the top domains data you can see there are many.  For anyone who has worked in the cyber security department at a large company before, this is not surprising, but it was cool to be able to see this in the data.
 
-* Domains with 2 Email Security Providers: 11,393
-* Domains with 3 Email Security Providers: 468
-* Domains with 4 Email Security Providers: 35
-* Domains with 5 Email Security Providers: 1
-
+* Domains with 2 SPF relationships with Email Security Providers: 11,393
+* Domains with 3 SPF relationships with Email Security Providers: 468
+* Domains with 4 SPF relationships with Email Security Providers: 35
+* Domains with 5 SPF relationships with Email Security Providers: 1
 
 ###  Top Email Security Provider from all top domain lists (via SPF)
 <script src="https://gist.github.com/jatrost/a1a3a0b2c4a7dbc3babefee99ad753eb.js"></script>
@@ -179,8 +183,34 @@ One other interesting aspect with SPF is it (potentially) reveals relationships 
 ### Domains with 4 or more Email Security Providers (via SPF)
 <script src="https://gist.github.com/jatrost/4b505a6dbcbbd55e7e068cf7262fb468.js"></script>
 
-### Some other potentially interesting results, not worth dumping on the screen:
+## Trusting Cloud Provider Networks
 
+As you can see from the next few tables, many domains transitively trust a lot of Cloud provider IP space for SPF.  For some of the larger networks trusted it seems like this carries risk since it may be possible for the cloud IP space to get reused; see [Fishing the AWS IP Pool for Dangling Domains
+](https://labs.bishopfox.com/tech-blog/2015/10/fishing-the-aws-ip-pool-for-dangling-domains) for a practical example of this. 
+
+Alexa 1000 Trusting AWS Networks
+<script src="https://gist.github.com/jatrost/9349839085ad5362d9cbb8ae981da524.js"></script>
+
+Alexa 1000 Trusting Azure Networks
+<script src="https://gist.github.com/jatrost/3fc802f5727049f390f427c5cc43651c.js"></script>
+
+Alexa 1000 Trusting GCP Networks
+<script src="https://gist.github.com/jatrost/e956f69d3d8120898eba5f2b07c19dac.js"></script>
+
+Fortune 1000 Trusting AWS Networks
+<script src="https://gist.github.com/jatrost/6b2ce9608a2ec3078243bd2dcdc99cc0.js"></script>
+
+Fortune 1000 Trusting Azure Networks
+<script src="https://gist.github.com/jatrost/44eedaa273e05522953581b09d4e5c1d.js"></script>
+
+Fortune 1000 Trusting GCP Networks
+<script src="https://gist.github.com/jatrost/a240ba87eb430cecfe62fe41d5ba752a.js"></script>
+
+### Some other potentially interesting results, not worth dumping here:
+
+* [Alexa top1m domains trusting AWS Networks](https://gist.github.com/jatrost/60cc44bf1b3b4a4617ca8ffb74b726a7)
+* [Alexa top1m domains trusting Azure Networks](https://gist.github.com/jatrost/97214849df789fd987b585f7321a8907)
+* [Alexa top1m domains trusting GCP Networks](https://gist.github.com/jatrost/a9b3c5ed9efd6cdd931673d9da6882e1)
 * [Top Maxmind ASNs of SFP Trusted Networks from Fortune 1000 (via SPF)](https://gist.github.com/jatrost/6d789a41a0712b1ef71818234335d5eb)
 * [Top Maxmind ASNs of SFP Trusted Networks from all top domain lists (via SPF)](https://gist.github.com/jatrost/eb52a7f3c19607ce4d08407660fc09aa)
 * [Top Maxmind ASNs of SFP Trusted Networks from Alexa top1m (via SPF)](https://gist.github.com/jatrost/f2e3567eb48788b8ba923852cb4aec96)
@@ -188,7 +218,7 @@ One other interesting aspect with SPF is it (potentially) reveals relationships 
 
 ### Future Work
 
-* SPF Crawler enhancements:  As you can see from the SPF guide for ["a"](https://dmarcian.com/spf-syntax-table/#a) and ["mx"](https://dmarcian.com/spf-syntax-table/#mx), SPF supports some fairly complex policies for allowing certain IPs to send email (esp the prefix operators on these SPF mechanisms).  I did not provide support for these mechanisms in the first version of my SPF crawler mainly due to the complexity involved.  Because of this, my results will under represent the trust relationships where these are used.
+* SPF Crawler enhancements:  As you can see from the SPF guide I shared above for ["a"](https://dmarcian.com/spf-syntax-table/#a) and ["mx"](https://dmarcian.com/spf-syntax-table/#mx), SPF supports some fairly complex policies for allowing certain IPs to send email (esp the prefix operators on these SPF mechanisms).  I did not provide support for these mechanisms in the first version of my SPF crawler mainly due to the complexity involved.  Because of this, my results will under represent the trust relationships where these are used.  I hope to add support for these operators to expand what could be found in this data.
 * Try some more graph analytics on the entire dataset.  In the Jupyter notebook I ran several graph algorithms on subsets of the entire graph (Fortune 100 and Alexa 100).  These showed some mildly interesting results, but testing against larger graphs caused graphviz to fail due to some data format issues that I have not had a chance to research.
 
 ### Resources
