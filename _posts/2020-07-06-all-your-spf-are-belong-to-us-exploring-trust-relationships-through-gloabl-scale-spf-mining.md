@@ -220,7 +220,7 @@ As you can see from the next few tables, many domains transitively trust a lot o
 
 ### Future Work
 
-* SPF Crawler enhancements:  As you can see from the SPF guide I shared above for ["a"](https://dmarcian.com/spf-syntax-table/#a) and ["mx"](https://dmarcian.com/spf-syntax-table/#mx), SPF supports some fairly complex policies for allowing certain IPs to send email (esp the prefix operators on these SPF mechanisms).  I did not provide support for these mechanisms in the first version of my SPF crawler mainly due to the complexity involved.  Because of this, my results will under represent the trust relationships where these are used.  I hope to add support for these operators to expand what could be found in this data.
+* SPF Crawler enhancements:  As you can see from the SPF guide I shared above for ["a"](https://dmarcian.com/spf-syntax-table/#a) and ["mx"](https://dmarcian.com/spf-syntax-table/#mx), SPF supports some fairly complex policies for allowing certain IPs to send email (esp. the prefix operators on these SPF mechanisms).  I did not provide support for these mechanisms in the first version of my SPF crawler mainly due to the complexity involved.  Because of this, my results will under represent the trust relationships where these are used.  I hope to add support for these operators to expand what could be found in this data.
 * Try some more graph analytics on the entire dataset.  In the Jupyter notebook I ran several graph algorithms on subsets of the entire graph (Fortune 100 and Alexa 100).  These showed some mildly interesting results, but testing against larger graphs caused graphviz to fail due to some data format issues that I have not had a chance to research.
 * Perform another study measuring DMARC and DKIM usage across popular domains.
 
@@ -232,7 +232,7 @@ And all data can be found at the links below:
 
 * [all-registered-domains.txt.gz](https://mx-intel-public.s3.amazonaws.com/all-registered-domains.txt.gz) - base domains extracted from combining several popular domains lists together and then uniqued.
 * [all-registered-domains-outputs-combined.txt.gz](https://mx-intel-public.s3.amazonaws.com/all-registered-domains-outputs-combined.txt.gz) - raw dig output for all the TXT requests.
-* [spf-results-all-registered-domains.json.gz](https://mx-intel-public.s3.amazonaws.com/spf-results-all-registered-domains.json.gz) - the raw results from running the SPF Crawler against all-registered-domains.txt.gz.
+* [spf-results-all-registered-domains.json.gz](https://mx-intel-public.s3.amazonaws.com/spf-results-all-registered-domains.json.gz) - the parsed results from running the SPF Crawler against all-registered-domains.txt.gz.
 * [spf-linked-all-registered-domains.json.gz](https://mx-intel-public.s3.amazonaws.com/spf-results-all-registered-domains.json.gz) - the assembled results from processing spf-results-all-registered-domains.json.gz.  This is the collapsed/combined data that shows all the SPF domains and networks included recursively.
 
 --Jason
