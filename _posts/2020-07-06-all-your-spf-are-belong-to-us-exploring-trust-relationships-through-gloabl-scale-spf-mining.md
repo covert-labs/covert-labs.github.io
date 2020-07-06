@@ -20,7 +20,7 @@ Here is the methodology I devised for this (very similar to the previous post, b
 
 ## Intro to Sender Policy Framework (SPF)
 
-The Sender Policy Framework (SPF) enables domain name administrators to authorize hosts to use their domain names when sending email (i.e. in the "MAIL FROM" or "HELO" identities in SMTP).  SPF records are published using DNS TXT records.  SPF compliant mail receivers use the published SPF records to test the authorization of sending Mail Transfer Agents (MTAs).  SPF can be used to build complex policies around who can send email on whose behalf.  Below is an example SPF record for Florida State University.
+The Sender Policy Framework (SPF) enables domain name administrators to authorize hosts to use their domain names when sending email (i.e. in the "MAIL FROM" or "HELO" identities in SMTP).  One of the goals of SPF is to limit spammer's abilities to spoof email messages.  SPF is limited and is usually used with DKIM and DMARC.  SPF records are published using DNS TXT records.  SPF compliant mail receivers use the published SPF records to test the authorization of sending Mail Transfer Agents (MTAs).  SPF can be used to build complex policies around who can send email on whose behalf.  Below is an example SPF record for Florida State University.
 
 <script src="https://gist.github.com/jatrost/544dfbc979332f6948a2bca065830dc5.js"></script>
 
@@ -76,7 +76,9 @@ Through this analysis, I hoped to answer the following questions:
 
 Below are some outputs and commentary from this project's Jupyter notebook that answer the questions above.
 
-These [networkx](https://networkx.github.io/) visualizations are a bit of a mess, but they should get the point across of how interconnected the SPF trust relationships are.
+## Network Graphs
+
+These [networkx](https://networkx.github.io/) visualizations of the Fortune 100 and Alexa 100 are a bit of a mess, but they should get the point across of how interconnected the SPF trust relationships are.
 
 ### Fortune 100 SPF Trusted Networks Graph
 <a href="/images/spf/fortune-100-networkx.png"><img src="/images/spf/fortune-100-networkx.png" width="600px"></a>
@@ -86,7 +88,7 @@ These [networkx](https://networkx.github.io/) visualizations are a bit of a mess
 
 ## Heatmaps
 
-As you can see from the next several heatmaps, as we go beyond the Alexa top 1,000 domains the number of networks trusted drastically increases, and as we hit the Alexa 1m, the entire Internet is trusted.  
+As you can see from the next several heatmaps, as we go beyond the Alexa top 1,000 domains the number of networks trusted drastically increases, and as we hit the Alexa 1m, the entire Internet is trusted (likely due to SPF misconfigurations).  
 
 These heatmaps were generated with the awesome [ipv4-heatmap](https://github.com/measurement-factory/ipv4-heatmap) tool provided by the [Measurement Factory](http://www.measurement-factory.com/).  The code to automate this can be found in my Jupyter Notebook [here](https://github.com/covert-labs/mx-intel/blob/master/SPF-Parse-Enrich.ipynb).
 
@@ -186,7 +188,7 @@ One other interesting aspect with SPF is it (potentially) reveals relationships 
 ## Trusting Cloud Provider Networks
 
 As you can see from the next few tables, many domains transitively trust a lot of Cloud provider IP space for SPF.  For some of the larger networks trusted it seems like this carries risk since it may be possible for the cloud IP space to get reused; see [Fishing the AWS IP Pool for Dangling Domains
-](https://labs.bishopfox.com/tech-blog/2015/10/fishing-the-aws-ip-pool-for-dangling-domains) for a practical example of this. 
+](https://labs.bishopfox.com/tech-blog/2015/10/fishing-the-aws-ip-pool-for-dangling-domains) for a practical example of this.  Like I mentioned earlier, SPF is usually used with DKIM and DMARC so this data doesn't paint the whole picture.  I am hoping to dive into DMARC/DKIM next. 
 
 Alexa 1000 Trusting AWS Networks
 <script src="https://gist.github.com/jatrost/9349839085ad5362d9cbb8ae981da524.js"></script>
@@ -220,12 +222,13 @@ Fortune 1000 Trusting GCP Networks
 
 * SPF Crawler enhancements:  As you can see from the SPF guide I shared above for ["a"](https://dmarcian.com/spf-syntax-table/#a) and ["mx"](https://dmarcian.com/spf-syntax-table/#mx), SPF supports some fairly complex policies for allowing certain IPs to send email (esp the prefix operators on these SPF mechanisms).  I did not provide support for these mechanisms in the first version of my SPF crawler mainly due to the complexity involved.  Because of this, my results will under represent the trust relationships where these are used.  I hope to add support for these operators to expand what could be found in this data.
 * Try some more graph analytics on the entire dataset.  In the Jupyter notebook I ran several graph algorithms on subsets of the entire graph (Fortune 100 and Alexa 100).  These showed some mildly interesting results, but testing against larger graphs caused graphviz to fail due to some data format issues that I have not had a chance to research.
+* Perform another study measuring DMARC and DKIM usage across popular domains.
 
 ### Resources
 
-Notebooks, Code, and summary results: [https://github.com/covert-labs/mx-intel](https://github.com/covert-labs/mx-intel).
+As usual all notebooks, code, and summary results can be found in Github: [https://github.com/covert-labs/mx-intel](https://github.com/covert-labs/mx-intel).
 
-#### Data:
+And all data can be found at the links below:
 
 * [all-registered-domains.txt.gz](https://mx-intel-public.s3.amazonaws.com/all-registered-domains.txt.gz) - base domains extracted from combining several popular domains lists together and then uniqued.
 * [spf-results-all-registered-domains.json.gz](https://mx-intel-public.s3.amazonaws.com/spf-results-all-registered-domains.json.gz) - the raw results from running the SPF Crawler against all-registered-domains.txt.gz.
