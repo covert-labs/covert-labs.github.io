@@ -190,22 +190,22 @@ One other interesting aspect with SPF is it (potentially) reveals relationships 
 As you can see from the next few tables, many domains transitively trust a lot of Cloud provider IP space for SPF.  For some of the larger networks trusted it seems like this carries risk since it may be possible for the cloud IP space to get reused; see [Fishing the AWS IP Pool for Dangling Domains
 ](https://labs.bishopfox.com/tech-blog/2015/10/fishing-the-aws-ip-pool-for-dangling-domains) for a practical example of this.  Like I mentioned earlier, SPF is usually used with DKIM and DMARC so this data doesn't paint the whole picture.  I am hoping to dive into DMARC/DKIM next. 
 
-Alexa 1000 Trusting AWS Networks
+### Alexa 1000 Trusting AWS Networks
 <script src="https://gist.github.com/jatrost/9349839085ad5362d9cbb8ae981da524.js"></script>
 
-Alexa 1000 Trusting Azure Networks
+### Alexa 1000 Trusting Azure Networks
 <script src="https://gist.github.com/jatrost/3fc802f5727049f390f427c5cc43651c.js"></script>
 
-Alexa 1000 Trusting GCP Networks
+### Alexa 1000 Trusting GCP Networks
 <script src="https://gist.github.com/jatrost/e956f69d3d8120898eba5f2b07c19dac.js"></script>
 
-Fortune 1000 Trusting AWS Networks
+### Fortune 1000 Trusting AWS Networks
 <script src="https://gist.github.com/jatrost/6b2ce9608a2ec3078243bd2dcdc99cc0.js"></script>
 
-Fortune 1000 Trusting Azure Networks
+### Fortune 1000 Trusting Azure Networks
 <script src="https://gist.github.com/jatrost/44eedaa273e05522953581b09d4e5c1d.js"></script>
 
-Fortune 1000 Trusting GCP Networks
+### Fortune 1000 Trusting GCP Networks
 <script src="https://gist.github.com/jatrost/a240ba87eb430cecfe62fe41d5ba752a.js"></script>
 
 ### Some other potentially interesting results, not worth dumping here:
@@ -231,6 +231,7 @@ As usual all notebooks, code, and summary results can be found in Github: [https
 And all data can be found at the links below:
 
 * [all-registered-domains.txt.gz](https://mx-intel-public.s3.amazonaws.com/all-registered-domains.txt.gz) - base domains extracted from combining several popular domains lists together and then uniqued.
+* [all-registered-domains-outputs-combined.txt.gz](https://mx-intel-public.s3.amazonaws.com/all-registered-domains-outputs-combined.txt.gz) - raw dig output for all the TXT requests.
 * [spf-results-all-registered-domains.json.gz](https://mx-intel-public.s3.amazonaws.com/spf-results-all-registered-domains.json.gz) - the raw results from running the SPF Crawler against all-registered-domains.txt.gz.
 * [spf-linked-all-registered-domains.json.gz](https://mx-intel-public.s3.amazonaws.com/spf-results-all-registered-domains.json.gz) - the assembled results from processing spf-results-all-registered-domains.json.gz.  This is the collapsed/combined data that shows all the SPF domains and networks included recursively.
 
