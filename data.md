@@ -24,6 +24,13 @@ Collection of Security and Network Data Resources.  See the [Threat Intelligence
 * [Tranco: A Research-Oriented Top Sites Ranking Hardened Against Manipulation](https://tranco-list.eu/) ([data](https://tranco-list.eu/top-1m.csv.zip)) - another top domains list derived from Alexa, Umbrella, Majestic, and Quantcast, but combined using the Dowdall rule.
 * [OpenIntel Historic active DNS data](https://data.openintel.nl/data/) - DNS resolution data for Alexa top1m, Umbrella top1m, and open TLDs (.se, .nu, .ee ccTLDs and all US Federal domain names from the .gov and .fed.us).
 
+### Malware
+
+* [EMBER](https://github.com/elastic/ember) - Endgame Malware BEnchmark for Research
+* [Malware Training Sets: A machine learning dataset for everyone](http://marcoramilli.blogspot.cz/2016/12/malware-training-sets-machine-learning.html) ([data](https://github.com/marcoramilli/MalwareTrainingSets))
+* [SoReL-20M](https://github.com/sophos-ai/SOREL-20M) - Sophos-ReversingLabs 20 Million dataset.
+* [Virusshare](https://virusshare.com/)
+
 ### Other Data
 
 * [betterdefaultpasslist](https://github.com/govolution/betterdefaultpasslist) - "list includes default credentials from various manufacturers for their products like NAS, ERP, ICS etc., that are used for standard products like mssql, vnc, oracle and so on"
@@ -38,7 +45,6 @@ Collection of Security and Network Data Resources.  See the [Threat Intelligence
 * [Domains-index.com](https://domains-index.com/) - ccTLD Zone Files / Domain Name Lists for sale.  See [Free Domain Lists](https://domains-index.com/downloads/category/free/)
 * [heralding honeypot log sample (3077 events)](/data/heralding_activity.log.gz)
 * [Malicious URLs Data Sets](http://sysnet.ucsd.edu/projects/url/)
-* [Malware Training Sets: A machine learning dataset for everyone](http://marcoramilli.blogspot.cz/2016/12/malware-training-sets-machine-learning.html) ([data](https://github.com/marcoramilli/MalwareTrainingSets))
 * [Multi-Source Cyber-Security Events](http://csr.lanl.gov/data/cyber1/)
 * [NSL-KDD Data Sets](https://github.com/defcom17/NSL_KDD)
 * [Onionscan data sample](https://github.com/automatingosint/osint_public/tree/master/onionrunner)
@@ -50,7 +56,6 @@ Collection of Security and Network Data Resources.  See the [Threat Intelligence
 * [The ADFA Intrusion Detection Data Sets](https://www.unsw.adfa.edu.au/australian-centre-for-cyber-security/cybersecurity/ADFA-IDS-Datasets/)
 * [VERIS Community Database](https://github.com/vz-risk/VCDB)
 * [ViewDns.info](http://viewdns.info/data/) - ccTLD Zone Files / Domain Name Lists for sale.
-* [Virusshare](https://virusshare.com/)
 * [VX Heaven](http://vxheaven.org/faq.php)
 * [Web Data Commons (Common Crawl derivatives)](http://webdatacommons.org/) - Extracting Structured Data from the Common Crawl
 * [WhoisXML Domain Registration Feeds (Commercial)](https://www.whoisxmlapi.com):
