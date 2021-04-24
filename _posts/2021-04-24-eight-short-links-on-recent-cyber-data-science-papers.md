@@ -12,7 +12,7 @@ share: true
 
 A short listing of cyber security data science research papers I've discovered recently.  Each of them uses machine learning or enables ML (i.e. providing training data or enabling creation of training data) to solve various security usecases, and many provide open source code as well.
 
-* [BODMAS: An Open Dataset for Learning based Temporal Analysis of PE Malware](https://liminyang.web.illinois.edu/data/DLS21_BODMAS.pdf). [[data]](https://whyisyoung.github.io/BODMAS/)
+* [BODMAS: An Open Dataset for Learning based Temporal Analysis of PE Malware](https://liminyang.web.illinois.edu/data/DLS21_BODMAS.pdf). [[data]](https://whyisyoung.github.io/BODMAS/).  Other malware related training data can be found [here](/data-links/).
 * [Compromised or Attacker-Owned: A Large Scale Classification and Study of Hosting Domains of Malicious URLs](https://www.usenix.org/system/files/sec21fall-desilva.pdf). [[code]](https://github.com/qcri/compromised) referenced in paper, but not live as of 4/24/2021.
 * [DeepHunter: A Graph Neural Network Based Approach for Robust Cyber Threat Hunting](https://arxiv.org/pdf/2104.09806.pdf). This uses an open source EDR tool named [BLUESPAWN]((https://github.com/ION28/BLUESPAWN/)) that I had not heard of before.
 * [DeepReflect: Discovering Malicious Functionality through Binary Reconstruction](https://www.usenix.org/system/files/sec21fall-downing.pdf).  [code](https://github.com/evandowning/deepreflect)
