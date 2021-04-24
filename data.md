@@ -26,6 +26,7 @@ Collection of Security and Network Data Resources.  See the [Threat Intelligence
 
 ### Malware
 
+* [Blue Hexagon Open Dataset for Malware AnalysiS (BODMAS)](https://whyisyoung.github.io/BODMAS/)
 * [EMBER](https://github.com/elastic/ember) - Endgame Malware BEnchmark for Research
 * [Malware Training Sets: A machine learning dataset for everyone](http://marcoramilli.blogspot.cz/2016/12/malware-training-sets-machine-learning.html) ([data](https://github.com/marcoramilli/MalwareTrainingSets))
 * [SoReL-20M](https://github.com/sophos-ai/SOREL-20M) - Sophos-ReversingLabs 20 Million dataset.
