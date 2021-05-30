@@ -16,8 +16,8 @@ In this short blog, I share four papers that focus on detecting malicious latera
 
 * [Latte: Large-Scale Lateral Movement Detection ](https://www.microsoft.com/en-us/research/uploads/prod/2019/03/Milcom2018_Liu.pdf)
 * [Detection and Threat Prioritization of Pivoting Attacks in Large Networks](https://iris.unimore.it/retrieve/handle/11380/1149159/349875/Detection%20and%20Threat.pdf)
-* [Uncovering Lateral Movement Using Authentication Logs](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9335647)
 * [Towards an Efficient Detection of Pivoting Activity](http://dl.ifip.org/db/conf/im/im2021-ws4-grasec/213223.pdf)
+* [A Machine Learning Approach for RDP-based Lateral Movement Detection](https://uwspace.uwaterloo.ca/bitstream/handle/10012/15074/Bai_Zhenyu.pdf?sequence=3)
 
 Lastly, if you're interested in discovering more interesting papers like these, use the method I outlined [here](/security-data-science-learning-resources/).
 
