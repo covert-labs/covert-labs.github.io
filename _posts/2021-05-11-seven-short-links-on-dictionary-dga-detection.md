@@ -2,7 +2,7 @@
 layout: post
 title: "Seven Short Links of Dictionary DGA Detection"
 description: ""
-modified: 2021-04-24
+modified: 2021-05-11
 tags: [security, research, machine learning, DGA, dictionary DGA]
 image:
   feature: grey-scale-dark.jpg

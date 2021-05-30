@@ -2,9 +2,9 @@
 layout: post
 title: "Four Short Links on Malicious Lateral Movement Detection"
 description: ""
-modified: 2021-04-24
-tags: [security, research, machine learning, lateral movement, pivoting]
-image:, island hopping
+modified: 2021-05-30
+tags: [security, research, machine learning, lateral movement, pivoting, island hopping]
+image:
   feature: grey-scale-dark.jpg
 comments: true
 share: true
