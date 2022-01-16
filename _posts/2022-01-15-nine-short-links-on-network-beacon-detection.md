@@ -10,7 +10,9 @@ comments: true
 share: true
 ---
 
-In this post I share 9 links to resources related to Network Beacon detection.  Network beacons are continuous automated communications between 2 hosts.  Network beacon detection focuses on identifying this automated traffic with the primary goal of aiding in detecting malware infections or adversary activity that have been missed by other controls.  
+In this post I share 9 links to resources related to Network Beacon detection.  
+
+Network beacons are continuous automated communications between 2 hosts.  Network beacon detection focuses on identifying this automated traffic with the primary goal of aiding in detecting malware infections or adversary activity that have been missed by other controls.  
 
 Beacon detection is a useful building block analytic with many different usecases.
 
