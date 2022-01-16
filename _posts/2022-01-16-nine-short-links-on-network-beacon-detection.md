@@ -18,7 +18,7 @@ Beacon detection is a useful building block analytic with many different usecase
 
 * Threat Hunting and Malware command and control (C2) detection - aid in detecting malware missed by anti-virus products.
 * Detection of automated third party traffic - detection of ongoing automated traffic to third parties may reveal unknown or emerging business relationships.
-* Identify automated web application dependencies (within an enterise or external to an enterprise)
+* Identify automated web application dependencies (within an enterprise or external to an enterprise)
 
 Links:
 
@@ -29,7 +29,7 @@ Links:
 * [RITA (Real Intelligence Threat Analytics) beacon analyzer](https://github.com/activecm/rita/blob/master/pkg/beacon/analyzer.go) - uses simple statistical approach based on 6 measures: connection time delta skew, connection dispersion, connection counts over time, data size skew, data size dispersion, and data size smallness score.
 * [How to detect beaconing traffic with Splunk?](https://github.com/inodee/threathunting-spl/blob/master/hunt-queries/Detecting_Beaconing.md) by Alex Teixeira
 * [Detect Beaconing with Flare, Elastic Stack, and Intrusion Detection Systems](http://www.austintaylor.io/detect/beaconing/intrusion/detection/system/command/control/flare/elastic/stack/2017/06/10/detect-beaconing-with-flare-elasticsearch-and-intrusion-detection-systems/) [[code]](https://github.com/austin-taylor/flare/blob/master/flare/analytics/command_control.py) by Austin Taylor
-* [BAYWATCH: Robust Beaconing Detection to Identify Infected Hosts in Large-Scale Enterprise Networks](https://alps-lab.github.io/paper/hu-dsn-2016.pdf) - uses FFT and periodgram based technique for identifying automated traffic.
+* [BAYWATCH: Robust Beaconing Detection to Identify Infected Hosts in Large-Scale Enterprise Networks](https://alps-lab.github.io/paper/hu-dsn-2016.pdf) - uses FFT and periodogram based technique for identifying automated traffic.
 * [Malware Beaconing Detection by Mining Large-scale DNS Logs for Targeted Attack Identification](https://publications.waset.org/10004242/malware-beaconing-detection-by-mining-large-scale-dns-logs-for-targeted-attack-identification)
 
 --Jason
