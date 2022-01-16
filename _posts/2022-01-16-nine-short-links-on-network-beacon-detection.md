@@ -2,7 +2,7 @@
 layout: post
 title: "9 Short links on Network Beacon Detection"
 description: ""
-modified: 2022-01-08
+modified: 2022-01-16
 tags: [security, beacons, research, threat hunting, c2]
 image:
   feature: beacons-header.png
