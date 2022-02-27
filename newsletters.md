@@ -22,3 +22,4 @@ share: true
 * [The Cloud Security Reading List](https://cloudseclist.com/)
 * [Seriously Risky Business](https://srslyriskybiz.substack.com/)
 * [Daniel Miessler's Unsupervised Learning](https://danielmiessler.com/subscribe/)
+* [This Week in 4N6](https://thisweekin4n6.com/)
