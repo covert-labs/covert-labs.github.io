@@ -33,6 +33,14 @@ Collection of Security and Network Data Resources.  See the [Threat Intelligence
 * [SoReL-20M](https://github.com/sophos-ai/SOREL-20M) - Sophos-ReversingLabs 20 Million dataset.
 * [Virusshare](https://virusshare.com/)
 
+### Spyware IOCs
+
+These were found via [this](https://github.com/SpyGuard/SpyGuard/blob/master/watchers.yaml).
+
+* [spyguard spyware IOCs](https://raw.githubusercontent.com/SpyGuard/spyguard/master/assets/iocs.json)
+* [spyguard whitelist](https://raw.githubusercontent.com/SpyGuard/spyguard/master/assets/whitelist.json)
+* [stalkerware spyware IOCs](https://raw.githubusercontent.com/AssoEchap/stalkerware-indicators/master/generated/indicators-for-tinycheck.json)
+
 ### Other Data
 
 * [betterdefaultpasslist](https://github.com/govolution/betterdefaultpasslist) - "list includes default credentials from various manufacturers for their products like NAS, ERP, ICS etc., that are used for standard products like mssql, vnc, oracle and so on"

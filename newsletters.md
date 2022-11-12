@@ -23,3 +23,5 @@ share: true
 * [Seriously Risky Business](https://srslyriskybiz.substack.com/)
 * [Daniel Miessler's Unsupervised Learning](https://danielmiessler.com/subscribe/)
 * [This Week in 4N6](https://thisweekin4n6.com/)
+
+Check out [awesome-security-newsletters](https://github.com/TalEliyahu/awesome-security-newsletters) for many more.
