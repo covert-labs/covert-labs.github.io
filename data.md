@@ -56,6 +56,7 @@ These were found via [this](https://github.com/SpyGuard/SpyGuard/blob/master/wat
 * [DGArchive](https://dgarchive.caad.fkie.fraunhofer.de/site/) - DGA Domains Database.
 * [Domains-index.com](https://domains-index.com/) - ccTLD Zone Files / Domain Name Lists for sale.  See [Free Domain Lists](https://domains-index.com/downloads/category/free/)
 * [heralding honeypot log sample (3077 events)](/data/heralding_activity.log.gz)
+* [IoT Device DNS logs](https://yourthings.info/data/) - labelled data for many different IoT devices.
 * [Malicious URLs Data Sets](http://sysnet.ucsd.edu/projects/url/)
 * [Multi-Source Cyber-Security Events](http://csr.lanl.gov/data/cyber1/)
 * [NSL-KDD Data Sets](https://github.com/defcom17/NSL_KDD)
