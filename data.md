@@ -34,7 +34,7 @@ Collection of Security and Network Data Resources.  See the [Threat Intelligence
 * [Malware Open-source Threat Intelligence Family (MOTIF)](https://github.com/boozallen/MOTIF)
 * [SoReL-20M](https://github.com/sophos-ai/SOREL-20M) - Sophos-ReversingLabs 20 Million dataset.
 * [Virusshare](https://virusshare.com/)
-* [malpedia/malpedia-flossed](https://github.com/malpedia/malpedia-flossed) - strings extractee from Malpedia malware using FLOSS.
+* [malpedia/malpedia-flossed](https://github.com/malpedia/malpedia-flossed) - strings extracted from Malpedia malware using FLOSS.
 
 ### Spyware IOCs
 
@@ -77,4 +77,4 @@ These were found via [this](https://github.com/SpyGuard/SpyGuard/blob/master/wat
 * [WhoisXML Domain Registration Feeds (Commercial)](https://www.whoisxmlapi.com):
     * [Whois Database Download](https://www.whoisxmlapi.com/whois-database-download.php)
     * [Newly Registered & Just Expired Domains](https://www.whoisxmlapi.com/newly-registered-domains.php)
-    * [fkie-cad/intrusion-detection-datasets](https://github.com/fkie-cad/intrusion-detection-datasets) - a collection of intrusion detection relates dataaets. 
+    * [fkie-cad/intrusion-detection-datasets](https://github.com/fkie-cad/intrusion-detection-datasets) - a collection of intrusion detection related datasets. 
