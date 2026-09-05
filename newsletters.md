@@ -13,6 +13,7 @@ share: true
 
 * [Data Engineering Weekly](https://www.dataengineeringweekly.com/)
 * [O'Reilly Data & AI Newsletter](https://www.oreilly.com/data/newsletter.html)
+* [AI Weekly](https://aiweekly.co/) - Discover what AI experts are reading and sharing right now
 * [DeepLearning.AI The Batch](https://read.deeplearning.ai/the-batch/)
 * [The Variable - A newsletter by Towards Data Science](https://medium.com/towards-data-science/newsletters/the-variable)
 
